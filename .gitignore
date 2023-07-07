@@ -1,0 +1,11 @@
+# Ignore system files
+.DS_Store
+
+# Ignore npm packages
+node_modules/
+
+# Editor files
+.vscode/*
+
+# Ignore generated css map
+*.css.map
