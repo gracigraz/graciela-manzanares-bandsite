@@ -58,12 +58,10 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 24px;
     height: 12vh;
 
     &__heading{
-        font-size: 24px;
-        font-weight: 700;
+        @include page-header;
         color: $primary-color-white;
     }
 
@@ -78,6 +76,7 @@ html, body {
     &__heading{
         font-size: 24px;
         padding: 16px;
+        @include page-header;
     }
     &__image{
         width: 100%;
@@ -109,16 +108,19 @@ html, body {
 
 .gallery{
     background-color: $secondary-color-alabaster;
+    padding: 1.5rem 1rem;
+    
 
     &__heading{
         padding: 16px;
+        @include page-header;
 
     }
     &__items{
+        width: 100%;
         display:flex;
-        flex-direction: column;
+        flex-direction:  column;
         justify-content: center;
-        align-items: center;
 
         @include tablet {
             flex-direction: row;
@@ -135,7 +137,7 @@ html, body {
         }
     }
     &__item{
-
+        width: 100%;
         padding: 16px 0;
 
         @include tablet {
@@ -155,9 +157,12 @@ html, body {
     width: 100%;
     color:$primary-color-white;
     padding: 1rem;
+    @include footer-copy;
 
     &__heading{
-
+        @include page-header;
+        margin-top: 0;
+        padding-top: 0;
     }
     &__nav{
         display: flex;
@@ -169,43 +174,51 @@ html, body {
         color:$secondary-color-mercury;
     }
     &__icon{
-        width: 25px;
-        height: 25px;
+        width: 1.5625rem;
+        height: 1.5625rem;
         padding-right: 1.5rem;
 
     }
     &__contacts{
-
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 1.5rem 0;
     }
     &__contact{
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;;
+
     }
     &__contact-name{
-        
+        white-space: pre-line;
+        @include footer-margin-padding;
     }
     &__contact-job{
         white-space: pre-line;
+        @include footer-margin-padding;
     }
     &__address{
         white-space: pre-line;
-
+        @include footer-margin-padding;
     }
 
     &__link-mail{
         text-decoration: none;
         color:$secondary-color-mercury;
+        @include footer-margin-padding;
 
     }
     &__link-logo{
-        text-decoration: none;
+        text-decoration: none;   
 
     }
     &__logo{
         max-height: 20px;
         max-width: 120px;
-
+        padding: 1rem 0 1.5rem 0;
     }
-    &__copywrite{
-
+    &__copyright{
+        margin-block-start: 0;
+        margin-block-end: 0;
     }
 }
