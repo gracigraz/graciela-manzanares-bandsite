@@ -15,8 +15,8 @@ html, body {
     align-items: center; 
 
     &__logo{
-        max-height: 20px;
-        max-width: 120px;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
         padding: 1rem 0;
     }
     &__link-logo{
@@ -58,10 +58,10 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 12vh;
+    height: 15vh;
 
     &__heading{
-        @include page-header;
+        @include font-page-header;
         color: $primary-color-white;
     }
 
@@ -71,28 +71,37 @@ html, body {
 
 .musicians{
     background-color: $primary-color-white;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
     
     &__heading{
-        font-size: 24px;
-        padding: 16px;
-        @include page-header;
+        padding-bottom: 1rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        @include font-page-header;
     }
     &__image{
         width: 100%;
-        padding: 1rem 0;
-
+        padding-bottom: 1rem;
     }
     &__quote{
-
+        @include font-quote;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-bottom: 1rem;
     }
-    
-    &__source{
 
+    &__source{
+        @include font-quote;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-bottom: 1.5rem;
 
     }
     &__subheading{
-
+        @include font-subheader;
+        margin-block-start:0;
+        margin-block-end: 0;
+     
     }
     &__body{
         display:flex;
@@ -100,26 +109,32 @@ html, body {
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
+        @include font-body-copy;
     }
     &__copy{
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-top: 1rem;
 
+        
     }
 }
 
 .gallery{
     background-color: $secondary-color-alabaster;
-    padding: 1.5rem 1rem;
-    
+    padding: 1.5rem 1rem 0 1rem;
 
     &__heading{
-        padding: 16px;
-        @include page-header;
+        padding-bottom: 1rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        @include font-page-header;
 
     }
     &__items{
         width: 100%;
         display:flex;
-        flex-direction:  column;
+        flex-direction: column;
         justify-content: center;
 
         @include tablet {
@@ -138,7 +153,7 @@ html, body {
     }
     &__item{
         width: 100%;
-        padding: 16px 0;
+        padding-bottom: 1rem;
 
         @include tablet {
             width: 40%;
@@ -154,13 +169,12 @@ html, body {
 
 .footer{
     background-color: $primary-color-bandSite-black;
-    width: 100%;
     color:$primary-color-white;
     padding: 1rem;
-    @include footer-copy;
+    @include font-footer-copy;
 
     &__heading{
-        @include page-header;
+        @include font-page-header;
         margin-top: 0;
         padding-top: 0;
     }
@@ -220,5 +234,6 @@ html, body {
     &__copyright{
         margin-block-start: 0;
         margin-block-end: 0;
+        font-size: .6875rem;
     }
 }
