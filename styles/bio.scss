@@ -40,7 +40,7 @@ html, body {
         font-weight: 400;
         text-align: center;
         width: 50%;
-        padding-bottom: 1rem;
+        padding-bottom: .75rem;
     
         &--active{
             color:$primary-color-white;
@@ -58,7 +58,7 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 15vh;
+    height: 16.75vh;
 
     &__heading{
         @include font-page-header;
@@ -72,6 +72,10 @@ html, body {
 .musicians{
     background-color: $primary-color-white;
     padding: 1.5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
     &__heading{
         padding-bottom: 1rem;
@@ -79,15 +83,32 @@ html, body {
         margin-block-end: 0;
         @include font-page-header;
     }
+    &__div{
+        width: 100%;
+        @include tablet {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        @include desktop {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+    }
     &__image{
         width: 100%;
         padding-bottom: 1rem;
+        
     }
     &__quote{
         @include font-quote;
         margin-block-start: 0;
         margin-block-end: 0;
-        padding-bottom: 1rem;
     }
 
     &__source{
@@ -101,22 +122,38 @@ html, body {
         @include font-subheader;
         margin-block-start:0;
         margin-block-end: 0;
-     
     }
     &__body{
-        display:flex;
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
         @include font-body-copy;
+
+        @include tablet {
+            flex-direction: row;
+            
+        }
+        
+        @include desktop {
+            flex-direction: row;
+
+        }
     }
     &__copy{
         margin-block-start: 0;
         margin-block-end: 0;
         padding-top: 1rem;
-
+        @include tablet {
+            padding-right: 1rem;
+            width: 40%;
+        }
         
+        @include desktop {
+            padding-right: 1rem;
+            width: 40%;
+        }
     }
 }
 
@@ -156,7 +193,7 @@ html, body {
         padding-bottom: 1rem;
 
         @include tablet {
-            width: 40%;
+            width: 30%;
             // margin: 3vw 0;
         }
         
@@ -170,7 +207,7 @@ html, body {
 .footer{
     background-color: $primary-color-bandSite-black;
     color:$primary-color-white;
-    padding: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     @include font-footer-copy;
 
     &__heading{
@@ -197,10 +234,10 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin: 1.5rem 0;
+        margin: 1rem 0;
     }
     &__contact{
-        margin-bottom: 1.5rem;;
+        margin-bottom: 1.25rem;;
 
     }
     &__contact-name{
@@ -229,7 +266,7 @@ html, body {
     &__logo{
         max-height: 20px;
         max-width: 120px;
-        padding: 1rem 0 1.5rem 0;
+        padding: 1rem 0 1rem 0;
     }
     &__copyright{
         margin-block-start: 0;

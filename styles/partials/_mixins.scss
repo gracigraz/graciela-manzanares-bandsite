@@ -12,10 +12,11 @@
     }
 }
 
+
 //mobile text styles
 
 @mixin footer-margin-padding{
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -38,7 +39,7 @@
 }
 
 @mixin font-quote{
-    font-size: .875rem;
+    font-size: .8438rem;
     line-height: 1.375rem;
     font-weight: 700;
 }
