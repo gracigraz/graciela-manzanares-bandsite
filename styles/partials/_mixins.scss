@@ -91,3 +91,9 @@
     line-height: 1.25rem;
     font-weight: 400;
 }
+
+@mixin font-source-dt{
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+}
