@@ -16,36 +16,6 @@
   font-weight: 700;
   font-style: normal;
 }
-.page-header {
-  font-size: 3.75rem;
-  line-height: 4.25rem;
-  font-weight: 700;
-}
-
-.section-header {
-  font-size: 2.25rem;
-  line-height: 2.75rem;
-  font-weight: 700;
-}
-
-.subheader {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
-}
-
-.body-copy {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 400;
-}
-
-.footer-copy {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 400;
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -57,11 +27,36 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 3rem 2.25rem 0 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-nav {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 3rem 2.25rem 0 2.25rem;
+  }
 }
 .main-nav__logo {
   max-height: 1.25rem;
   max-width: 7.5rem;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .main-nav__logo {
+    padding-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-nav__logo {
+    padding-bottom: 3rem;
+  }
 }
 .main-nav__link-logo {
   text-decoration: none;
@@ -74,12 +69,22 @@ html, body {
   align-items: baseline;
   justify-content: space-evenly;
   width: 100%;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
   -webkit-margin-before: 0;
           margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+}
+@media screen and (min-width: 768px) {
+  .main-nav__list {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-nav__list {
+    justify-content: flex-start;
+  }
 }
 .main-nav__item {
   color: #E1E1E1;
@@ -87,6 +92,18 @@ html, body {
   text-align: center;
   width: 50%;
   padding-bottom: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .main-nav__item {
+    width: auto;
+    display: inline;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-nav__item {
+    display: inline;
+    width: auto;
+  }
 }
 .main-nav__item--active {
   color: #FFFFFF;
@@ -102,7 +119,18 @@ html, body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 16.75vh;
+  height: 60vw;
+  padding: 0 1rem 1.5rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 0 2.25rem 3rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding: 0 2.25rem 3rem 2.25rem;
+  }
 }
 .hero__heading {
   font-size: 1.5rem;
@@ -110,14 +138,34 @@ html, body {
   font-weight: 700;
   color: #FFFFFF;
 }
+@media screen and (min-width: 768px) {
+  .hero__heading {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__heading {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
 
 .musicians {
   background-color: #FFFFFF;
   padding: 1.5rem 1rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .musicians {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .musicians {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
 }
 .musicians__heading {
   padding-bottom: 1rem;
@@ -129,23 +177,47 @@ html, body {
   line-height: 2rem;
   font-weight: 700;
 }
-.musicians__div {
-  width: 100%;
-}
-@media screen and (min-width: 320px) {
-  .musicians__div {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .musicians__heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1280px) {
+  .musicians__heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+.musicians__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
   .musicians__div {
-    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    width: 91.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .musicians__div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .musicians__image {
@@ -190,12 +262,12 @@ html, body {
   line-height: 1.125rem;
   font-weight: 400;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
   .musicians__body {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1280px) {
   .musicians__body {
     flex-direction: row;
   }
@@ -207,13 +279,13 @@ html, body {
           margin-block-end: 0;
   padding-top: 1rem;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
   .musicians__copy {
     padding-right: 1rem;
     width: 40%;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1280px) {
   .musicians__copy {
     padding-right: 1rem;
     width: 40%;
@@ -222,7 +294,17 @@ html, body {
 
 .gallery {
   background-color: #FAFAFA;
-  padding: 1.5rem 1rem 0 1rem;
+  padding: 1.5rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 3rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery {
+    padding: 3rem 2.25rem;
+  }
 }
 .gallery__heading {
   padding-bottom: 1rem;
@@ -234,13 +316,29 @@ html, body {
   line-height: 2rem;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .gallery__heading {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__heading {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    padding-bottom: 2.25rem;
+  }
+}
 .gallery__items {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
   .gallery__items {
     flex-direction: row;
     flex-wrap: wrap;
@@ -248,7 +346,7 @@ html, body {
     align-content: space-evenly;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1280px) {
   .gallery__items {
     flex-direction: row;
     flex-wrap: wrap;
@@ -258,16 +356,18 @@ html, body {
 }
 .gallery__item {
   width: 100%;
-  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
   .gallery__item {
     width: 30%;
+    margin-top: 2.25rem;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1280px) {
   .gallery__item {
     width: 30%;
+    margin-top: 2.25rem;
   }
 }
 

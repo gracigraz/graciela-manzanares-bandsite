@@ -13,13 +13,20 @@
 }
 
 
-//mobile text styles
+
 
 @mixin footer-margin-padding{
     padding-bottom: 1.25rem;
     margin-block-start: 0;
     margin-block-end: 0;
 }
+
+@mixin margin-block{
+    margin-block-start:0;
+    margin-block-end: 0;
+}
+
+//mobile text styles
 
 @mixin font-page-header{
     font-size: 1.5rem;
@@ -53,5 +60,34 @@
 @mixin font-footer-copy{
     font-size: .8125rem;
     line-height: 1.125rem;
+    font-weight: 400;
+}
+
+
+//desktop and tablet text styles
+@mixin font-page-header-dt{
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+}
+
+@mixin font-section-header-dt{
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+}
+@mixin font-subheader-dt{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+}
+@mixin font-body-copy-dt{
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+}
+@mixin font-footer-copy-dt{
+    font-size: .875rem;
+    line-height: 1.25rem;
     font-weight: 400;
 }

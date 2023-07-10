@@ -13,11 +13,29 @@ html, body {
     display: flex;
     flex-direction:column;
     align-items: center; 
+    padding-top: 1.5rem;
+    @include tablet {
+        flex-direction:row;
+        align-items: flex-end; 
+        padding: 3rem 2.25rem 0 2.25rem;
+        
+    }
+    @include desktop {
+        flex-direction:row;
+        align-items: flex-end; 
+        padding: 3rem 2.25rem 0 2.25rem;
+    }
 
     &__logo{
         max-height: 1.25rem;
         max-width: 7.5rem;
-        padding: 1rem 0;
+        padding-bottom: 1rem;
+        @include tablet {
+            padding-bottom: 3rem;
+        }
+        @include desktop {
+            padding-bottom: 3rem;
+        }
     }
     &__link-logo{
         text-decoration: none;
@@ -30,9 +48,14 @@ html, body {
         align-items: baseline;
         justify-content: space-evenly;
         width: 100%;
-        margin-block-end :0;
-        margin-block-start: 0;
+        @include margin-block;
         padding-inline-start: 0;
+        @include tablet {
+            justify-content: flex-start;
+        }
+        @include desktop {
+            justify-content: flex-start;
+        }
     }
 
     &__item{
@@ -41,6 +64,15 @@ html, body {
         text-align: center;
         width: 50%;
         padding-bottom: .75rem;
+        @include tablet {
+            width: auto;
+            display: inline;
+        }
+        @include desktop {
+            display: inline;
+            width: auto;
+        }
+        
     
         &--active{
             color:$primary-color-white;
@@ -58,11 +90,25 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 16.75vh;
+    height: 60vw;
+    padding: 0 1rem 1.5rem 1rem;
+    @include tablet {
+        padding: 0 2.25rem 3rem  2.25rem;
+    }
+    @include desktop {
+        padding: 0 2.25rem 3rem  2.25rem;
+    }
 
     &__heading{
         @include font-page-header;
         color: $primary-color-white;
+    
+        @include tablet {
+            @include font-page-header-dt;
+        }
+        @include desktop {
+            @include font-page-header-dt;
+        }
     }
 
 }
@@ -72,32 +118,51 @@ html, body {
 .musicians{
     background-color: $primary-color-white;
     padding: 1.5rem 1rem 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    @include tablet {
+        padding: 3rem 2.25rem 2.25rem 2.25rem;
+    }
+    @include desktop {
+        padding: 3rem 2.25rem 2.25rem 2.25rem;
+    }
     
     &__heading{
         padding-bottom: 1rem;
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include margin-block;
         @include font-page-header;
+        @include tablet {
+            @include font-section-header-dt;
+        }
+        @include desktop {
+            @include font-section-header-dt;
+        }
+
     }
     &__div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        @include tablet {
-            width: 80%;
+
+        @include tablet { 
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
+            width: 91.5%;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         @include desktop {
-            width: 80%;
+            width: 90%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     &__image{
@@ -113,15 +178,14 @@ html, body {
 
     &__source{
         @include font-quote;
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include margin-block;
         padding-bottom: 1.5rem;
 
     }
     &__subheading{
         @include font-subheader;
-        margin-block-start:0;
-        margin-block-end: 0;
+        @include margin-block;
+
     }
     &__body{
         display: flex;
@@ -142,8 +206,7 @@ html, body {
         }
     }
     &__copy{
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include margin-block;
         padding-top: 1rem;
         @include tablet {
             padding-right: 1rem;
@@ -159,13 +222,26 @@ html, body {
 
 .gallery{
     background-color: $secondary-color-alabaster;
-    padding: 1.5rem 1rem 0 1rem;
+    padding: 1.5rem 1rem; 
+    @include tablet {
+        padding: 3rem 2.25rem;
+    }
+    @include desktop {
+        padding: 3rem 2.25rem;
+    }
 
     &__heading{
         padding-bottom: 1rem;
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include margin-block;
         @include font-page-header;
+        @include tablet {
+            @include font-page-header-dt;
+            padding-bottom: 2.25rem;
+        }
+        @include desktop {
+            @include font-page-header-dt;
+            padding-bottom: 2.25rem;
+        }
 
     }
     &__items{
@@ -190,16 +266,16 @@ html, body {
     }
     &__item{
         width: 100%;
-        padding-bottom: 1rem;
+        margin-top: 1rem;
 
         @include tablet {
             width: 30%;
-            // margin: 3vw 0;
+            margin-top: 2.25rem;
         }
         
         @include desktop {
             width: 30%;
-            // margin: 3vw 0;
+            margin-top: 2.25rem;
         }
     }
 }
