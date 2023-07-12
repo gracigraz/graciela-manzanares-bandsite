@@ -1,0 +1,11 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/typography';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+}
+
