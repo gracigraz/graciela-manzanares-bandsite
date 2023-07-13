@@ -487,6 +487,42 @@ body {
   }
 }
 
+.comments {
+  background-color: #FFFFFF;
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comments {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments {
+    padding: 3rem 6rem 2.25rem 6rem;
+  }
+}
+.comments__heading {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .comments__heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding-bottom: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding-bottom: 2.25rem;
+    margin-left: 5.75rem;
+  }
+}
 .footer {
   background-color: #323232;
   color: #FFFFFF;

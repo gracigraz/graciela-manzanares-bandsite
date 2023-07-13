@@ -382,6 +382,46 @@ body {
     
 }
 
+
+.comments{
+    background-color: $primary-color-white;
+    padding: 1.5rem 1rem 1rem 1rem;
+
+    @include tablet {
+        padding: 3rem 2.25rem 2.25rem 2.25rem;
+    }
+
+    @include desktop {
+        padding: 3rem 6rem 2.25rem 6rem;
+    }
+    &__heading{
+        // @include margin-block;
+        @include font-section-header;
+        
+
+        @include tablet {
+            @include font-section-header-dt;
+            padding-bottom: 1.25rem;
+        }
+
+        @include desktop {
+            @include font-section-header-dt;
+            padding-bottom: 2.25rem;
+            margin-left: 5.75rem;
+        }
+
+    }
+    &__form{
+
+    }
+    &__container{
+
+    }
+
+}
+
+
+
 .footer {
     background-color: $primary-color-bandSite-black;
     color: $primary-color-white;
