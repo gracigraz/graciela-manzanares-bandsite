@@ -84,13 +84,18 @@
                     </label>
                     <label>
                         NAME 
-                        <input name="fullName" type="text" placeholder="Enter your name" required>
+                        <input class="comments__input-name" name="fullName" type="text" placeholder="Enter your name" required>
                     </label>
-                    <label for="comments">COMMENT</label>
-                    <textarea name="comments" id="comments">Add a new comment</textarea>
+                    <label for="comments">
+                        COMMENT
+                    <input class="comments__input-comment" name="comments" type="text" placeholder="Add a new comment">
+                </label>
             </div>
                 <button type="submit" class="comments__button">COMMENT</button>
             </form>
+            <div id="comments__display">
+                  <!-- Comments go Here -->
+            </div>
 
         </section>
     </main>

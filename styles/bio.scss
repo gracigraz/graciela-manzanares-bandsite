@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Avenir", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 .link {
@@ -38,6 +39,8 @@ body {
         display: flex;
         max-height: 1.25rem;
         max-width: 7.5rem;
+        // max-height: 1.25rem;
+        // max-width: 7.5rem;
         padding: 1rem 0 .5rem 0;
 
         @include tablet {
@@ -417,9 +420,18 @@ body {
     &__container{
 
     }
+    &__image{
+        border-radius: 4px;
+    }
+    &__button{
 
+    }
 }
 
+label {
+    // display: block;
+    // margin-bottom: 0.5rem;
+}
 
 
 .footer {
