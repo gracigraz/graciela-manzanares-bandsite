@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles/bio.css" rel="stylesheet">
+    <link href="./styles/global.css" rel="stylesheet">
     <script defer src="scripts/index-page.js"></script>
     <title>Bio Page</title>
 </head>
@@ -64,39 +65,55 @@
         <section class="gallery">
             <h2 class="gallery__heading">Photo Gallery</h2>
             <div class="gallery__items">
-                <img class="gallery__item gallery__item--type1" src="./assets/images/Photo-gallery-1.jpg" alt="Concert Crowd Attending a Music Concert, People Silhouettes are Visible, backlit by stage lights, Some Raised Hands.">
-                <img class="gallery__item gallery__item--type1" src="./assets/images/Photo-gallery-2.jpg" alt="Woman Dancing at a Music Concert">
-                <img class="gallery__item gallery__item--type2" src="./assets/images/Photo-gallery-3.jpg" alt="Crowd At A Music Concert, Audience Raising Hands Up">
-                <img class="gallery__item gallery__item--type1" src="./assets/images/Photo-gallery-4.jpg" alt="Woman with Raising Hand Enjoying Music Concert">
-                <img class="gallery__item gallery__item--type1" src="./assets/images/Photo-gallery-5.jpg" alt="Silhouettes of Concert Crowd Hands in Front of Bright Stage lights">
-                <img class="gallery__item gallery__item--type2" src="./assets/images/Photo-gallery-6.jpg" alt="Male Singer Holding Four Fingers up, Performing in a Concert">
-                <img class="gallery__item" src="./assets/images/Photo-gallery-7.jpg" alt="Concert Crowd Point of View in Front of a Lit Stage for a Night Concert">
-                <img class="gallery__item gallery__item--type3" src="./assets/images/Photo-gallery-8.jpg" alt="Closeup of a hand playing DJ controller">
-                <img class="gallery__item" src="./assets/images/Photo-gallery-9.jpg" alt="Cheering Crowd with Raised Hands and Falling Confetti at Concert">
+                <img class="gallery__item gallery__item--type1" src="./assets/images/Photo-gallery-1.jpg"
+                    alt="Concert Crowd Attending a Music Concert, People Silhouettes are Visible, backlit by stage lights, Some Raised Hands.">
+                <img class="gallery__item gallery__item--type1" src="./assets/images/Photo-gallery-2.jpg"
+                    alt="Woman Dancing at a Music Concert">
+                <img class="gallery__item gallery__item--type2" src="./assets/images/Photo-gallery-3.jpg"
+                    alt="Crowd At A Music Concert, Audience Raising Hands Up">
+                <img class="gallery__item gallery__item--type1" src="./assets/images/Photo-gallery-4.jpg"
+                    alt="Woman with Raising Hand Enjoying Music Concert">
+                <img class="gallery__item gallery__item--type1" src="./assets/images/Photo-gallery-5.jpg"
+                    alt="Silhouettes of Concert Crowd Hands in Front of Bright Stage lights">
+                <img class="gallery__item gallery__item--type2" src="./assets/images/Photo-gallery-6.jpg"
+                    alt="Male Singer Holding Four Fingers up, Performing in a Concert">
+                <img class="gallery__item" src="./assets/images/Photo-gallery-7.jpg"
+                    alt="Concert Crowd Point of View in Front of a Lit Stage for a Night Concert">
+                <img class="gallery__item gallery__item--type3" src="./assets/images/Photo-gallery-8.jpg"
+                    alt="Closeup of a hand playing DJ controller">
+                <img class="gallery__item" src="./assets/images/Photo-gallery-9.jpg"
+                    alt="Cheering Crowd with Raised Hands and Falling Confetti at Concert">
             </div>
         </section>
         <section class="comments">
             <h2 class="comments__heading">Join the Conversation</h2>
             <form id="comments__form" class="comments__form">
+
+                <label>
+                    <input class="comments__profile-image" type="image" name="image"
+                        src="./assets/images/Mohan-muruge.jpg" alt="Mohan muruge side profile picture" />
+                </label>
                 <div class="comments__container">
                     <label>
-                        <input type="image" name="image" src="./assets/images/Mohan-muruge.jpg" alt="Mohan-muruge" />
+                        <input style="display: none;" type="file" name="file" />
                     </label>
                     <label>
-                        NAME 
-                        <input class="comments__input-name" name="fullName" type="text" placeholder="Enter your name" required>
+                        NAME
+                        <input class="comments__input-name" name="fullName" type="text" placeholder="Enter your name"
+                            required>
                     </label>
-                    <label for="comments">
-                        COMMENT
-                    <input class="comments__input-comment" name="comments" type="text" placeholder="Add a new comment">
-                </label>
-            </div>
-                <button type="submit" class="comments__button">COMMENT</button>
-            </form>
-            <div id="comments__display">
-                  <!-- Comments go Here -->
-            </div>
 
+                    <label>
+                        COMMENT
+                        <input class="comments__input-comment" name="message" type="text" placeholder="Add a new comment">
+                    </label>
+
+                    <button type="submit" class="comments__button">COMMENT</button>
+                </div>
+            </form>
+            
+                <!-- Comments displayed Here -->
+            
         </section>
     </main>
     <footer class="footer">
@@ -138,8 +155,8 @@
                 <a class="footer__email" href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a>
             </section>
         </section>
-        <a class="link" href="/index.html"><img class="footer__logo-bottom"
-                src="./assets/logos/Logo-bandsite.svg" alt="logo-bandsite"></a>
+        <a class="link" href="/index.html"><img class="footer__logo-bottom" src="./assets/logos/Logo-bandsite.svg"
+                alt="logo-bandsite"></a>
         <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
     </footer>
 </body>
