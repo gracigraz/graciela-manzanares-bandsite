@@ -87,33 +87,29 @@
         </section>
         <section class="comments">
             <h2 class="comments__heading">Join the Conversation</h2>
-            <form id="comments__form" class="comments__form">
-
-                <label>
-                    <input class="comments__profile-image" type="image" name="image"
-                        src="./assets/images/Mohan-muruge.jpg" alt="Mohan muruge side profile picture" />
-                </label>
-                <div class="comments__container">
-                    <label>
-                        <input style="display: none;" type="file" name="file" />
+            <div class="comments__section">
+                <form id="comments__form" class="comments__form">
+                    <label for="comments__profile-image">
+                        <input id="comments__profile-image" class="comments__profile-image" type="image" name="image"
+                            src="./assets/images/Mohan-muruge.jpg" alt="Mohan muruge side profile picture" />
                     </label>
-                    <label>
-                        NAME
-                        <input class="comments__input-name" name="fullName" type="text" placeholder="Enter your name"
-                            required>
-                    </label>
+                    <div class="comments__container">
+                        <label for="comments__input-name" class="comments__label-name">
+                            NAME
+                            <input id="comments__input-name" class="comments__input-name" name="fullName" type="text"
+                                placeholder="Enter your name" required>
+                        </label>
 
-                    <label>
-                        COMMENT
-                        <input class="comments__input-comment" name="message" type="text" placeholder="Add a new comment">
-                    </label>
-
-                    <button type="submit" class="comments__button">COMMENT</button>
-                </div>
-            </form>
-            
+                        <label for="comments__input-comment" class="comments__label-comment">
+                            COMMENT
+                            <input id="comments__input-comment" class="comments__input-comment" name="message" type="text"
+                                placeholder="Add a new comment">
+                        </label>
+                        <button type="submit" class="comments__button">COMMENT</button>
+                    </div>
+                </form>
                 <!-- Comments displayed Here -->
-            
+            </div>
         </section>
     </main>
     <footer class="footer">

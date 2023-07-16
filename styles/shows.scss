@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Avenir", Arial, Helvetica, sans-serif;
-    // box-sizing: border-box;
+
 }
 
 .hero{
@@ -71,8 +71,8 @@ body {
         }
         
     }
-}
 
+}
 .shows{
     background-color: $primary-color-white;
     padding: 1.5rem 1rem 1rem 1rem;
@@ -86,7 +86,7 @@ body {
         padding: 3rem 6rem 2.25rem 6rem;
     }
     &__heading{
-        // @include margin-block;
+        @include margin-block;
         @include font-section-header;
         color: $primary-color-bandSite-black;
         
@@ -101,7 +101,6 @@ body {
             padding-bottom: 2.25rem;
             margin-left: 5.75rem;
         }
-
     }
     
     &__button{

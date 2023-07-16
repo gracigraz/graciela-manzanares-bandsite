@@ -21,7 +21,7 @@ function createCommentCard(comment){
     name.innerText = comment.name;
 
     const timestamp = document.createElement('span');
-    timestamp.classList.add('comments__tiemstamp');
+    timestamp.classList.add('comments__timestamp');
     timestamp.innerText = comment.timestamp;
 
     const note = document.createElement('p');
@@ -47,7 +47,7 @@ function createCommentCard(comment){
     return cardEl;
 }
 
-const section = document.querySelector('.comments');
+const section = document.querySelector('.comments__section');
 const cardCon = document.createElement('div');
 cardCon.classList.add('comments__div'); 
 section.appendChild(cardCon);
@@ -83,18 +83,17 @@ const handleSubmit = (event) => {
         note: event.target.message.value
     };
     console.log(cardData)
-    commentsF.push(cardData);
     console.log(commentsF);
-    event.target.reset(); //Reset the form
- 
+    commentsF.unshift(cardData);
+    console.log(commentsF);
     displayComment(commentsF);
-
+    event.target.reset(); //Reset the form
 };
+
 //Creat a const variable formEl to store the value of '#comments__form' from the DOM
 const formEl = document.querySelector('#comments__form');
 // Add an event listener to the form to get all input data within form
 formEl.addEventListener("submit", handleSubmit);
-
 
 displayComment(commentsF);
 

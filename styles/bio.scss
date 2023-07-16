@@ -300,17 +300,17 @@ body {
 
 .comments{
     background-color: $primary-color-white;
-    padding: 1.5rem 1rem 1rem 1rem;
+    margin: 1.5rem 1rem 1rem 1rem;
     
     @include tablet {
-        padding: 3rem 2.25rem 2.25rem 2.25rem;
+        margin: 3rem 2.25rem 2.25rem 2.25rem;
     }
 
     @include desktop {
-        padding: 3rem 6rem 2.25rem 6rem;
+        margin: 3rem 6rem 2.25rem 6rem;
     }
     &__heading{
-        // @include margin-block;
+        @include margin-block;
         @include font-section-header;
         
 
@@ -321,24 +321,35 @@ body {
 
         @include desktop {
             @include font-section-header-dt;
-            padding-bottom: 2.25rem;
-            margin-left: 5.75rem;
+            margin-left: 2rem;
         }
 
+    }
+    &__section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     &__form{
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         border-bottom: solid .0625rem $secondary-color-mercury;
         padding-bottom: 1rem;
+        margin-right: 1rem;
+        width: 100%;
         @include font-button-label;
         @include tablet{
             @include font-button-label-dt;
+            width: 50%;
+            justify-content: center;
         }
         @include desktop {
             @include font-button-label-dt;
+            width: 50%;
+            justify-content: center;
         }
 
 
@@ -346,16 +357,24 @@ body {
     &__container{
         display: flex;
         flex-direction: column;
-        align-items: center;
+    
 
     }
     &__profile-image{
-        border-radius: 36px;
+        border-radius: 50%;
         height: 36px;
         width: 36px;
         object-fit: cover;
-        margin: 1rem;
-        margin-top: 1rem;
+        margin: 2rem 1rem 0  1rem;
+ 
+        @include tablet{
+            height: 48px;
+            width: 48px;
+        }
+        @include desktop {
+            height: 48px;
+            width: 48px;
+        }
         
 
     }
@@ -368,22 +387,150 @@ body {
         background-color:$primary-color-bandSite-black;
         color: $primary-color-white;
         height: 40px;
-        width: 150px;
+        width: 100%;
+        @include tablet{
+            min-width: 150px;
+        }
+        @include desktop{
+            min-width: 150px;
+        }
+
     }
 
-    &__input-name{
-        border-color: $secondary-color-mercury;
-        color: $primary-color-bandSite-black;
+    &__div{
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            width: 50%;
+        }
+        @include desktop{
+            width: 50%;
+        }
 
     }
+    &__label-name{
+        display:flex;
+        flex-direction: column;
+        color: $primary-color-silver;
+        width: 100%;
+    
+    }
     &__input-name{
-        border-color: $secondary-color-mercury;
         color: $primary-color-bandSite-black;
+        border: solid 1px $secondary-color-mercury;
+        height: 36px;
+        border-radius: 4px;
+        padding: .75rem;
+        margin: .25rem;
+        background-color: $secondary-color-alabaster;
+       
+        @include tablet{
+            height: 48px;
+            padding: 1rem;
+        }
+        @include desktop {
+            height: 48px;
+            padding: 1rem;
+        }
+        &::placeholder {
+            color: $primary-color-bandSite-black;
+            vertical-align: text-top;
+        }
+
+    }
+    &__label-comment{
+        display:flex;
+        flex-direction: column;
+        color: $primary-color-silver;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    &__input-comment{
+       @include form-fields;
+       vertical-align: text-top;
+       height: 6.75rem;
+      
+        @include tablet{
+            height: 9rem;
+            padding: 1rem;
+        }
+        @include desktop{
+            height: 9rem;
+            padding: 1rem;
+        }
+        &::placeholder {
+            color: $primary-color-bandSite-black;  
+        }
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: row;
+        color: $primary-color-bandSite-black;
+        border-bottom: .0625rem solid $secondary-color-mercury;
+    }
+    &__avatar{
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        margin: 1rem 1rem 0 1rem;
+        background-color: $secondary-color-mercury;
+     
+        @include tablet{
+            height: 48px;
+            width: 48px;
+   
+        }
+        @include desktop {
+            height: 48px;
+            width: 48px;
+        }
         
     }
+    &__header-div{
+        display:flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+
+    }
+    &__name{
+        @include font-body-copy-demi;
+        
+        @include tablet{
+            @include font-body-copy-demi-dt;
+        }
+        @include desktop{
+            @include font-body-copy-demi-dt;
+        }
+
+    }
+    &__timestamp{
+        @include font-body-copy;
+        color: $primary-color-silver;
+        @include tablet{
+            @include font-body-copy-dt;
+        }
+        @include desktop{
+            @include font-body-copy-dt;
+        }
+
+    }
+    &__body-div{
+        display:flex;
+        flex-direction: column;
+    }
+    
+    &__note{
+        @include font-body-copy;
+        @include tablet{
+            @include font-body-copy-dt;
+        }
+        @include desktop{
+            @include font-body-copy-dt;
+        }
+
+    }
+
 }
-label{
-    display:flex;
-    flex-direction: column;
-    color: $secondary-color-mercury;
-}
+

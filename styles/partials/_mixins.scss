@@ -12,6 +12,16 @@
     }
 }
 
+@mixin form-fields{
+    color: $primary-color-bandSite-black;
+    border: solid 1px $secondary-color-mercury;
+    border-radius: 4px;
+    padding: .75rem;
+    margin: .25rem;
+    background-color: $secondary-color-alabaster;
+}
+
+
 
 
 
@@ -56,6 +66,11 @@
     line-height: 1.125rem;
     font-weight: 400;
 }
+@mixin font-body-copy-demi{
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+}
 
 @mixin font-footer-copy{
     font-size: .8125rem;
@@ -90,6 +105,12 @@
     font-size: .875rem;
     line-height: 1.375rem;
     font-weight: 400;
+}
+
+@mixin font-body-copy-demi-dt{
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
 }
 @mixin font-footer-copy-dt{
     font-size: .875rem;

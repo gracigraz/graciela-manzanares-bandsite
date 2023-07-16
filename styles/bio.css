@@ -384,19 +384,23 @@ body {
 
 .comments {
   background-color: #FFFFFF;
-  padding: 1.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .comments {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    margin: 3rem 2.25rem 2.25rem 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comments {
-    padding: 3rem 6rem 2.25rem 6rem;
+    margin: 3rem 6rem 2.25rem 6rem;
   }
 }
 .comments__heading {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -414,17 +418,24 @@ body {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
-    padding-bottom: 2.25rem;
-    margin-left: 5.75rem;
+    margin-left: 2rem;
   }
+}
+.comments__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .comments__form {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   border-bottom: solid 0.0625rem #E1E1E1;
   padding-bottom: 1rem;
+  margin-right: 1rem;
+  width: 100%;
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-weight: 700;
@@ -434,6 +445,8 @@ body {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-weight: 700;
+    width: 50%;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -441,21 +454,33 @@ body {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-weight: 700;
+    width: 50%;
+    justify-content: center;
   }
 }
 .comments__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .comments__profile-image {
-  border-radius: 36px;
+  border-radius: 50%;
   height: 36px;
   width: 36px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 1rem;
-  margin-top: 1rem;
+  margin: 2rem 1rem 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comments__profile-image {
+    height: 48px;
+    width: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__profile-image {
+    height: 48px;
+    width: 48px;
+  }
 }
 .comments__button {
   margin-top: 1rem;
@@ -466,19 +491,192 @@ body {
   background-color: #323232;
   color: #FFFFFF;
   height: 40px;
-  width: 150px;
+  width: 100%;
 }
-.comments__input-name {
-  border-color: #E1E1E1;
-  color: #323232;
+@media screen and (min-width: 768px) {
+  .comments__button {
+    min-width: 150px;
+  }
 }
-.comments__input-name {
-  border-color: #E1E1E1;
-  color: #323232;
+@media screen and (min-width: 1280px) {
+  .comments__button {
+    min-width: 150px;
+  }
 }
-
-label {
+.comments__div {
   display: flex;
   flex-direction: column;
-  color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .comments__div {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__div {
+    width: 50%;
+  }
+}
+.comments__label-name {
+  display: flex;
+  flex-direction: column;
+  color: #AFAFAF;
+  width: 100%;
+}
+.comments__input-name {
+  color: #323232;
+  border: solid 1px #E1E1E1;
+  height: 36px;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin: 0.25rem;
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .comments__input-name {
+    height: 48px;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__input-name {
+    height: 48px;
+    padding: 1rem;
+  }
+}
+.comments__input-name::-moz-placeholder {
+  color: #323232;
+  vertical-align: text-top;
+}
+.comments__input-name::placeholder {
+  color: #323232;
+  vertical-align: text-top;
+}
+.comments__label-comment {
+  display: flex;
+  flex-direction: column;
+  color: #AFAFAF;
+  margin-top: 1rem;
+  width: 100%;
+}
+.comments__input-comment {
+  color: #323232;
+  border: solid 1px #E1E1E1;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin: 0.25rem;
+  background-color: #FAFAFA;
+  vertical-align: text-top;
+  height: 6.75rem;
+}
+@media screen and (min-width: 768px) {
+  .comments__input-comment {
+    height: 9rem;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__input-comment {
+    height: 9rem;
+    padding: 1rem;
+  }
+}
+.comments__input-comment::-moz-placeholder {
+  color: #323232;
+}
+.comments__input-comment::placeholder {
+  color: #323232;
+}
+.comments__card {
+  display: flex;
+  flex-direction: row;
+  color: #323232;
+  border-bottom: 0.0625rem solid #E1E1E1;
+}
+.comments__avatar {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  margin: 1rem 1rem 0 1rem;
+  background-color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .comments__avatar {
+    height: 48px;
+    width: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__avatar {
+    height: 48px;
+    width: 48px;
+  }
+}
+.comments__header-div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.comments__name {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .comments__name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+}
+.comments__timestamp {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .comments__timestamp {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__timestamp {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+.comments__body-div {
+  display: flex;
+  flex-direction: column;
+}
+.comments__note {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .comments__note {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__note {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=bio.css.map */

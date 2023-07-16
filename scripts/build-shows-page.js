@@ -35,26 +35,6 @@ const shows = [
 
 
 
- //create article with class of shows
-const section = document.createElement('section');
-section.classList.add('shows');
-
-
- //get header
- const headerHtml = document.querySelector('header')
- headerHtml.appendChild(main);
- 
-  //create main html tag
- const main = document.createElement('main');
- main.appendChild(section);
-
-  // create heading with class of shows__heading and add the inner text of 
-const heading = document.createElement('h2');
-heading.classList.add('shows__heading');
-heading.innerText = 'Shows';
-
-section.appendChild(heading);
-
 function createShowCard(show) {
     //create article with class of shows
     const showCardEl = document.createElement('article');
@@ -90,32 +70,61 @@ function createShowCard(show) {
     button.classList.add('shows__button');
     button.innerText = "BUY TICKETS";
 
-    // append  elements above as children to the cardEl
+    // append  elements above as children to the showCardEl
     showCardEl.appendChild(heading);
     showCardEl.appendChild(dateHeader);
-    showCardEl.appendChild(venueHeader);
-    showCardEl.appendChild(locationHeader);
     showCardEl.appendChild(date);
+    showCardEl.appendChild(venueHeader);
     showCardEl.appendChild(venue);
+    showCardEl.appendChild(locationHeader);    
     showCardEl.appendChild(location);
+    showCardEl.appendChild(button);
 
-    return cardEl;
+    console.log(showCardEl);
+    return showCardEl;
 } 
+ //get main
+ const main = document.querySelector('main');
 
-section.appendChild(cardEl);
 
-function renderShows() {
-            
-      
-}          
+ //create article with class of shows
+const section = document.createElement('section');
+section.classList.add('shows');
+main.appendChild(section);
+
+// create heading with class of shows__heading and add the inner text of 
+const heading = document.createElement('h2');
+heading.classList.add('shows__heading');
+heading.innerText = 'Shows';
+section.appendChild(heading);
+console.log(heading);
+
+const div = document.createElement('div');
+div.classList.add('shows__div');
+section.appendChild(div);
+console.log(div);
+
+function renderShows(show) {
+    const showsEl = document.querySelector('.shows__div');
+    console.log(showsEl, "gra");
+    showsEl.innerHTML = ""; 
+       // Use forEach to loop through each item in our commentsF array and create a card
+    shows.forEach(show => {
+        const card = createShowCard(show);
+        showsEl.appendChild(card);
+    });             
+}   
+// div.appendChild(showCardEl);      
+renderShows(shows);
+
     
  // Loop through the todo items and append a list item for each of them       
-for (let i=0; i<shows.length;i++){
-    let itemEl = document.createElement('li');
-    itemEl.innerText = shows[i].date;
-    itemEl.classList.add('todo-list__item');
-    todoListEl.appendChild(itemEl);
-}
+// for (let i=0; i<shows.length;i++){
+//     let itemEl = document.createElement('li');
+//     itemEl.innerText = shows[i].date;
+//     itemEl.classList.add('todo-list__item');
+//     todoListEl.appendChild(itemEl);
+// }
 
     // //create a ul with class of shows__list
     // const list = document.createElement('ul');

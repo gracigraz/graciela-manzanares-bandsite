@@ -115,6 +115,10 @@ body {
   }
 }
 .shows__heading {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
