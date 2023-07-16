@@ -20,13 +20,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
-    padding: 0 1rem;
-
-
+    height: 100vw;
+    padding: 1rem;
+   
     @include tablet {
         padding: 0 2.25rem 3rem 2.25rem;
-        height: 52vw;
+        height: 60vw;
     }
 
     @include desktop {
@@ -37,39 +36,49 @@ body {
     &__subheading {
         @include font-subheader;
         color: $primary-color-white;
+        @include margin-block;
+        padding-top: 1.5rem;
 
         @include tablet {
             @include font-subheader-dt;
+            padding-top: 2.25rem;
         }
 
         @include desktop {
             @include font-subheader-dt;
             margin-left: 2.25rem;
+            margin-top: 2.25rem;
         }
     }
 
     &__heading {
         @include font-page-header;
         color: $primary-color-white;
+        @include margin-block;
+        margin-top: 1.5rem;
+        white-space: pre-line;
 
         @include tablet {
             @include font-page-header-dt;
+            // width: 75%;
         }
 
         @include desktop {
             @include font-page-header-dt;
             margin-left: 2.25rem;
+            // width: 50%;
         }
     }
 
     &__song {
-
+        margin: 1.5rem 0;
         @include tablet {
             width: 60%;
         }
 
         @include desktop {
             width: 60%;
+            margin-left: 2.25rem;
         }
 
     }
@@ -106,115 +115,139 @@ body {
             margin-left: 2.25rem;
         }
     }
+    &__date-div, &__venue-div, &__location-div {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__header-date, &__header-venue, &__header-location{
+        color: $primary-color-silver;
+        @include font-h3-shows-demi;
+        @include margin-block;
 
+    }
+    &__date, &__venue, &__location{
+        color: $primary-color-bandSite-black;
+        @include font-body-shows-demi;
+        @include margin-block;
+    }
 
-
-
-
-    &__container-visible-headers {
-       
-        display: flex;
-        flex-direction: row;
+    &__button {
+        background-color: $primary-color-bandSite-black;
+        color: $primary-color-white;
+        height: 40px;
+        width: 100%;
+        border-radius: .25rem;
+        text-align: center;
+        border: none;
+        
 
         @include tablet {
-            h3:first-of-type {
-                color: red;
-                
-            }
+            width: 150px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include desktop {
+            width: 150px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        &:hover {
+            background-color: $secondary-color-bandSite-darkBlack;
+
         }
     }
-
-    @include desktop {
-        display: block;
-    }
-
-
-&__button {
-    background-color: $primary-color-bandSite-black;
-    color: $primary-color-white;
-    height: 40x;
-    width: 100%;
-    border-radius: .25rem;
-    text-align: center;
-
-    @include tablet {
-        width: 150px;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    @include desktop {
-        width: 150px;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    &:hover {
-        background-color: $secondary-color-bandSite-darkBlack;
-
-    }
-}
 
 &__card {
     background-color: white;
+    padding-right: 1rem;
 
     @include tablet {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     }
 
     @include desktop {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     }
 
-}
-
-&__card:hover {
-    @include desktop {
-        background-color: $secondary-color-mercury;
-    }
-   
-
-}
-
-&__shows_div{
-    @include tablet {
-        h3:first-of-type {
-            display: none;
+    &__card:hover {
+        @include desktop {
+            background-color: $secondary-color-mercury;
         }
     }
+}
+&__div{
+    padding-right: 1rem;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+&__div &__card:first-of-type {
+    h3:first-of-type{
+        display: block;
+    }
+    &__button{
+        height:50%;
+
+    }
+}
     @include desktop {
         &__header-date:first-of-type {
             display: none;
         }
     }
-}
-
 
 
 @include tablet {
-    &__header-venue:first-of-type {
+    &__header-date:first-of-type {
         display: none;
     }
 }
 
 @include desktop {
-    &__header-venue:first-of-type {
+    &__header-date:first-of-type {
         display: none;
     }
 }
 
-@include tablet {
-    &__header-location:first-of-type {
-        display: none;
+    @include tablet {
+        &__header-venue:first-of-type {
+            display: none;
+        }
     }
-}
 
-@include desktop {
-    &__header-location:first-of-type {
-        display: none;
+    @include desktop {
+        &__header-venue:first-of-type {
+            display: none;
+        }
     }
-}
+
+    @include tablet {
+        &__header-location:first-of-type {
+            display: none;
+        }
+    }
+
+    @include desktop {
+        &__header-location:first-of-type {
+            // display: none;
+            color:red;
+        }
+    }
 
 }

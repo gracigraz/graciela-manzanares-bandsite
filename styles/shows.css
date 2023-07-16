@@ -32,12 +32,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 1rem;
+  height: 100vw;
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) {
   .hero {
     padding: 0 2.25rem 3rem 2.25rem;
-    height: 52vw;
+    height: 60vw;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -51,12 +52,18 @@ body {
   line-height: 1.375rem;
   font-weight: 600;
   color: #FFFFFF;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  padding-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .hero__subheading {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
+    padding-top: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -65,6 +72,7 @@ body {
     line-height: 2rem;
     font-weight: 600;
     margin-left: 2.25rem;
+    margin-top: 2.25rem;
   }
 }
 .hero__heading {
@@ -72,6 +80,12 @@ body {
   line-height: 2rem;
   font-weight: 700;
   color: #FFFFFF;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  margin-top: 1.5rem;
+  white-space: pre-line;
 }
 @media screen and (min-width: 768px) {
   .hero__heading {
@@ -88,6 +102,9 @@ body {
     margin-left: 2.25rem;
   }
 }
+.hero__song {
+  margin: 1.5rem 0;
+}
 @media screen and (min-width: 768px) {
   .hero__song {
     width: 60%;
@@ -96,6 +113,7 @@ body {
 @media screen and (min-width: 1280px) {
   .hero__song {
     width: 60%;
+    margin-left: 2.25rem;
   }
 }
 
@@ -141,27 +159,38 @@ body {
     margin-left: 2.25rem;
   }
 }
-.shows__container-visible-headers {
-  display: flex;
-  flex-direction: row;
+.shows__date-div, .shows__venue-div, .shows__location-div {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-@media screen and (min-width: 768px) {
-  .shows__container-visible-headers h3:first-of-type {
-    color: red;
-  }
+.shows__header-date, .shows__header-venue, .shows__header-location {
+  color: #AFAFAF;
+  font-size: 0.6563rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
-@media screen and (min-width: 1280px) {
-  .shows {
-    display: block;
-  }
+.shows__date, .shows__venue, .shows__location {
+  color: #323232;
+  font-size: 0.8438rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 .shows__button {
   background-color: #323232;
   color: #FFFFFF;
-  height: 40x;
+  height: 40px;
   width: 100%;
   border-radius: 0.25rem;
   text-align: center;
+  border: none;
 }
 @media screen and (min-width: 768px) {
   .shows__button {
@@ -182,31 +211,64 @@ body {
 }
 .shows__card {
   background-color: white;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .shows__card {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__card {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 @media screen and (min-width: 1280px) {
-  .shows__card:hover {
+  .shows__card__card:hover {
     background-color: #E1E1E1;
   }
 }
+.shows__div {
+  padding-right: 1rem;
+}
 @media screen and (min-width: 768px) {
-  .shows__shows_div h3:first-of-type {
+  .shows__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+.shows__div .shows__card:first-of-type h3:first-of-type {
+  display: block;
+}
+.shows__div .shows__card:first-of-type__button {
+  height: 50%;
+}
+@media screen and (min-width: 1280px) {
+  .shows__header-date:first-of-type {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__header-date:first-of-type {
     display: none;
   }
 }
 @media screen and (min-width: 1280px) {
-  .shows__shows_div__header-date:first-of-type {
+  .shows__header-date:first-of-type {
     display: none;
   }
 }
@@ -227,6 +289,6 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .shows__header-location:first-of-type {
-    display: none;
+    color: red;
   }
 }/*# sourceMappingURL=shows.css.map */

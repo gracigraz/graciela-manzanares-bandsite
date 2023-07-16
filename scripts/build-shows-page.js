@@ -75,12 +75,12 @@ function createShowCard(show) {
     button.classList.add('shows__button');
     button.innerText = "BUY TICKETS";
 
-     //create div and add a class of comments__header-div to use flexbox on the name and date
-     const divDate = document.createElement('div');
-     divDate.classList.add('shows__date-div');
+    //create div and add a class of comments__header-div to use flexbox on the name and date
+    const divDate = document.createElement('div');
+    divDate.classList.add('shows__date-div');
       //create div and add a class of comments__header-div to use flexbox on the name and date
-      const divVenue = document.createElement('div');
-      divVenue.classList.add('shows__venue-div');
+    const divVenue = document.createElement('div');
+    divVenue.classList.add('shows__venue-div');
 
     //create div and add a class of comments__header-div to use flexbox on the name and date
     const divLocation = document.createElement('div');
@@ -121,24 +121,26 @@ const containerVisHead = document.createElement('div');
 containerVisHead.classList.add('shows__container-visible-headers');
 
 
-// create h3 elements for the date, venue and location table headers
-const dateHeaderV = document.createElement('h3');
-dateHeaderV.classList.add('shows__header-date--visible');
-dateHeaderV.innerText = "DATE";
+// // create h3 elements for the date, venue and location table headers
+// const dateHeaderV = document.createElement('h3');
+// dateHeaderV.classList.add('shows__header-date--invisible');
+// dateHeaderV.classList.add('shows__header-date');
+// dateHeaderV.innerText = "DATE";
 
-const venueHeaderV = document.createElement('h3');
-venueHeaderV.classList.add('shows__header-venue--visible');
-venueHeaderV.innerText = "VENUE";
+// const venueHeaderV = document.createElement('h3');
+// venueHeaderV.classList.add('shows__header-venue--invisible');
+// venueHeaderV.classList.add('shows__header-venue');
+// venueHeaderV.innerText = "VENUE";
 
-const locationHeaderV = document.createElement('h3');
-locationHeaderV.classList.add('shows__header-location--visible');
-locationHeaderV.innerText = "LOCATION";
+// const locationHeaderV = document.createElement('h3');
+// locationHeaderV.classList.add('shows__header-location--invisible');
+// locationHeaderV.classList.add('shows__header-location');
+// locationHeaderV.innerText = "LOCATION";
 
-section.appendChild(containerVisHead);
-containerVisHead.appendChild(dateHeaderV);
-containerVisHead.appendChild(venueHeaderV);
-containerVisHead.appendChild(locationHeaderV);
-
+// section.appendChild(containerVisHead);
+// containerVisHead.appendChild(dateHeaderV);
+// containerVisHead.appendChild(venueHeaderV);
+// containerVisHead.appendChild(locationHeaderV);
 
 
 
@@ -150,13 +152,13 @@ console.log(div);
 
 
 
-
 function renderShows(show) {
     const showsEl = document.querySelector('.shows__div');
     console.log(showsEl, "gra");
-    // showsEl.innerHTML = ""; 
+    showsEl.innerHTML = ""; 
        // Use forEach to loop through each item in our commentsF array and create a card
     shows.forEach(show => {
+        console.log(show);
         const card = createShowCard(show);
         showsEl.appendChild(card);
     });             
@@ -165,32 +167,4 @@ function renderShows(show) {
 renderShows(shows);
 
     
- // Loop through the todo items and append a list item for each of them       
-// for (let i=0; i<shows.length;i++){
-//     let itemEl = document.createElement('li');
-//     itemEl.innerText = shows[i].date;
-//     itemEl.classList.add('todo-list__item');
-//     todoListEl.appendChild(itemEl);
-// }
 
-    // //create a ul with class of shows__list
-    // const list = document.createElement('ul');
-    // list.classList.add('shows__list');
-
-    // // //create a li with class of shows__list-item
-    // const listItem = document.createElement('li');
-    // list.classList.add('shows__list-item');
-
-    // showCardEl.appendChild(list);
-    // list.apppendChild(listItem);
-
-
-    // function renderShows2(show2) {
-    //     const showsEl2 = document.querySelector('.shows__div');
-    //         console.log(showsEl, "gra");
-    //     shows2.forEach(show2 => {
-    //         const card2 = createShowCard(show2);
-    //         showsEl2.appendChild(card2);
-    //     });             
-    // }
-    // renderShows2(shows2);

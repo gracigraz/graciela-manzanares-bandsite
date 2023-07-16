@@ -60,6 +60,11 @@
     line-height: 1.375rem;
     font-weight: 700;
 }
+@mixin font-body-shows-demi{
+    font-size: .8438rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+}
 
 @mixin font-body-copy{
     font-size: .8125rem;
@@ -80,6 +85,11 @@
 
 @mixin font-button-label{
     font-size: .625rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
+@mixin font-h3-shows-demi{
+    font-size: .6563rem;
     line-height: 1.25rem;
     font-weight: 700;
 }

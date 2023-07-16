@@ -10,8 +10,14 @@ body {
     box-sizing: border-box;
 }
 .link {
-    text-decoration: none;
+    text-decoration: none;  
+    color: $secondary-color-mercury;
+    &--active {
+        text-decoration: none;  
+        color: $primary-color-white;
+    }
 }
+
 
 .main-nav {
     background-color: $primary-color-bandSite-black;
@@ -38,8 +44,6 @@ body {
         display: flex;
         max-height: 1.25rem;
         max-width: 7.5rem;
-        // max-height: 1.25rem;
-        // max-width: 7.5rem;
         padding: 1rem 0 .5rem 0;
 
         @include tablet {
