@@ -11,7 +11,7 @@ body {
 
 }
 
-.hero{
+.hero {
     background-image: url(../assets/images/hero-shows.jpg);
     background-position: center;
     background-size: cover;
@@ -20,9 +20,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-  
+
     padding: 0 1rem;
-    
+
 
     @include tablet {
         padding: 0 2.25rem 3rem 2.25rem;
@@ -33,6 +33,7 @@ body {
         padding: 0 2.25rem 3rem 6rem;
         height: 46vw;
     }
+
     &__subheading {
         @include font-subheader;
         color: $primary-color-white;
@@ -60,7 +61,8 @@ body {
             margin-left: 2.25rem;
         }
     }
-    &__song{
+
+    &__song {
 
         @include tablet {
             width: 60%;
@@ -69,15 +71,16 @@ body {
         @include desktop {
             width: 60%;
         }
-        
+
     }
 
 }
-.shows{
+
+.shows {
     background-color: $primary-color-white;
     padding: 1.5rem 1rem 1rem 1rem;
     width: 100%;
-    
+
     @include tablet {
         padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
@@ -85,11 +88,12 @@ body {
     @include desktop {
         padding: 3rem 6rem 2.25rem 6rem;
     }
-    &__heading{
+
+    &__heading {
         @include margin-block;
         @include font-section-header;
         color: $primary-color-bandSite-black;
-        
+
 
         @include tablet {
             @include font-section-header-dt;
@@ -99,33 +103,118 @@ body {
         @include desktop {
             @include font-section-header-dt;
             padding-bottom: 2.25rem;
-            margin-left: 5.75rem;
+            margin-left: 2.25rem;
         }
     }
-    
-    &__button{
-        background-color: $primary-color-bandSite-black;
-        color: $primary-color-white;
-        height: 40x;
-        width:100%;
-        border-radius: .25rem;
-        text-align: center;
+
+
+
+
+
+    &__container-visible-headers {
+       
+        display: flex;
+        flex-direction: row;
+
         @include tablet {
-            width: 150px;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        @include desktop {
-            width: 150px;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        &:hover{
-            background-color: $secondary-color-bandSite-darkBlack;
-
+            h3:first-of-type {
+                color: red;
+                
+            }
         }
     }
+
+    @include desktop {
+        display: block;
+    }
+
+
+&__button {
+    background-color: $primary-color-bandSite-black;
+    color: $primary-color-white;
+    height: 40x;
+    width: 100%;
+    border-radius: .25rem;
+    text-align: center;
+
+    @include tablet {
+        width: 150px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @include desktop {
+        width: 150px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &:hover {
+        background-color: $secondary-color-bandSite-darkBlack;
+
+    }
+}
+
+&__card {
+    background-color: white;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+&__card:hover {
+    @include desktop {
+        background-color: $secondary-color-mercury;
+    }
+   
+
+}
+
+&__shows_div{
+    @include tablet {
+        h3:first-of-type {
+            display: none;
+        }
+    }
+    @include desktop {
+        &__header-date:first-of-type {
+            display: none;
+        }
+    }
+}
+
+
+
+@include tablet {
+    &__header-venue:first-of-type {
+        display: none;
+    }
+}
+
+@include desktop {
+    &__header-venue:first-of-type {
+        display: none;
+    }
+}
+
+@include tablet {
+    &__header-location:first-of-type {
+        display: none;
+    }
+}
+
+@include desktop {
+    &__header-location:first-of-type {
+        display: none;
+    }
+}
 
 }
