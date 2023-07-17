@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Avenir", Arial, Helvetica, sans-serif;
-    // box-sizing: border-box;
 }
 
 .link {
@@ -25,7 +24,7 @@ body {
     align-items: center;
     height: 58vw;
     padding: 0 1rem;
-    
+
 
     @include tablet {
         padding: 0 2.25rem 3rem 2.25rem;
@@ -81,7 +80,7 @@ body {
         }
     }
 
-    &__div-desktop-tablet{
+    &__div-desktop-tablet {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -260,48 +259,55 @@ body {
 
     &__item {
         width: 100%;
-        margin-top: 1rem;      
+        margin-top: 1rem;
+
         @include tablet {
             width: 31%;
-            margin-top:0;
-            &--type1{
+            margin-top: 0;
+
+            &--type1 {
                 margin-right: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-            &--type2{
+
+            &--type2 {
                 margin-bottom: 1.5rem;
-                
+
             }
-            &--type3{
+
+            &--type3 {
                 margin: 0 1.5rem;
-                
+
             }
         }
 
         @include desktop {
             width: 27%;
-            margin-top:0;
-            &--type1{
+            margin-top: 0;
+
+            &--type1 {
                 margin-right: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-            &--type2{
+
+            &--type2 {
                 margin-bottom: 1.5rem;
-                
+
             }
-            &--type3{
-                margin: 0 1.5rem;   
+
+            &--type3 {
+                margin: 0 1.5rem;
             }
         }
     }
-    
+
 }
 
 
-.comments{
+.comments {
     background-color: $primary-color-white;
     margin: 1.5rem 1rem 1rem 1rem;
-    
+
     @include tablet {
         margin: 3rem 2.25rem 2.25rem 2.25rem;
     }
@@ -309,10 +315,11 @@ body {
     @include desktop {
         margin: 3rem 6rem 2.25rem 6rem;
     }
-    &__heading{
+
+    &__heading {
         @include margin-block;
         @include font-section-header;
-        
+
 
         @include tablet {
             @include font-section-header-dt;
@@ -325,208 +332,280 @@ body {
         }
 
     }
-    &__section{
+
+    &__section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    &__form{
+
+    &__form {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
         border-bottom: solid .0625rem $secondary-color-mercury;
         padding-bottom: 1rem;
-        margin-right: 1rem;
         width: 100%;
         @include font-button-label;
-        @include tablet{
+
+        @include tablet {
             @include font-button-label-dt;
-            width: 50%;
+            width: 85%;
             justify-content: center;
         }
+
         @include desktop {
             @include font-button-label-dt;
-            width: 50%;
+            width: 47.5%;
             justify-content: center;
         }
 
 
     }
-    &__container{
+
+    &__container {
         display: flex;
         flex-direction: column;
-    
+        width: 100%;
+
 
     }
-    &__profile-image{
+
+    &__profile-image {
         border-radius: 50%;
-        height: 36px;
-        width: 36px;
+        max-height: 2.25rem;
+        height: 2.25rem;
+        max-width: 2.25rem;
+        width: 2.25rem;
         object-fit: cover;
-        margin: 2rem 1rem 0  1rem;
- 
-        @include tablet{
-            height: 48px;
-            width: 48px;
+        margin: 2rem 1rem 0 1rem;
+
+        @include tablet {
+            max-height: 3rem;
+            height: 3rem;
+            max-width: 3rem;
+            width: 3rem;
         }
+
         @include desktop {
-            height: 48px;
-            width: 48px;
+            max-height: 3rem;
+            height: 3rem;
+            max-width: 3rem;
+            width: 3rem;
         }
-        
 
     }
-    &__button{
+
+    &__button {
         margin-top: 1rem;
         border: none;
-        border-radius: 4px;
+        border-radius: .25rem;
         font-size: inherit;
         padding: 0.5rem;
-        background-color:$primary-color-bandSite-black;
+        background-color: $primary-color-bandSite-black;
         color: $primary-color-white;
-        height: 40px;
+        height: 2.5rem;
         width: 100%;
-        @include tablet{
-            min-width: 150px;
+        @include font-button-shows-label;
+        font-weight: 400;
+
+        @include tablet {
+            min-width: 9.375rem;
+            width: 33%;
+            align-self: flex-end;
+            @include font-button-label-shows-dt;
+            font-weight: 400;
         }
-        @include desktop{
-            min-width: 150px;
+
+        @include desktop {
+            min-width: 9.375rem;
+            width: 30%;
+            align-self: flex-end;
+            @include font-button-label-shows-dt;
+            font-weight: 400;
+            margin-top: 1.5rem;
+            margin-bottom: .5rem;
         }
 
     }
 
-    &__div{
+    &__div {
         display: flex;
         flex-direction: column;
-        @include tablet{
-            width: 50%;
+
+        @include tablet {
+            width: 85%;
         }
-        @include desktop{
-            width: 50%;
+
+        @include desktop {
+            width: 47.5%;
         }
 
     }
-    &__label-name{
-        display:flex;
+
+    &__label-name {
+        display: flex;
         flex-direction: column;
         color: $primary-color-silver;
         width: 100%;
-    
+
     }
-    &__input-name{
+
+    &__input-name {
         color: $primary-color-bandSite-black;
-        border: solid 1px $secondary-color-mercury;
-        height: 36px;
-        border-radius: 4px;
-        padding: .75rem;
+        border: solid .0625rem $secondary-color-mercury;
+        height: 1.5rem;
+        min-height: 1.5rem;
+        border-radius: .25rem;
+        padding: 0.25rem .75rem;
         margin: .25rem;
         background-color: $secondary-color-alabaster;
-       
-        @include tablet{
-            height: 48px;
+
+        @include tablet {
+            height: 1.5rem;
+            min-height: 1.5rem;
             padding: 1rem;
         }
+
         @include desktop {
-            height: 48px;
+            height: 1.5rem;
+            min-height: 1.5rem;
             padding: 1rem;
         }
+
         &::placeholder {
             color: $primary-color-bandSite-black;
-            vertical-align: text-top;
+            text-align: left;
+            vertical-align: top;
+            line-height: 1;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+
         }
 
     }
-    &__label-comment{
-        display:flex;
+
+    &__label-comment {
+        display: flex;
         flex-direction: column;
         color: $primary-color-silver;
         margin-top: 1rem;
         width: 100%;
     }
-    &__input-comment{
-       @include form-fields;
-       vertical-align: text-top;
-       height: 6.75rem;
-      
-        @include tablet{
-            height: 9rem;
+
+    &__input-comment {
+        @include form-fields;
+        height: 4.5rem;
+
+        @include tablet {
+            height: 4.5rem;
             padding: 1rem;
         }
-        @include desktop{
-            height: 9rem;
+
+        @include desktop {
+            height: 4.5rem;
             padding: 1rem;
         }
+
         &::placeholder {
-            color: $primary-color-bandSite-black;  
+            color: $primary-color-bandSite-black;
+            text-align: left;
+            vertical-align: top;
+            line-height: 1;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
         }
+
     }
 
-    &__card{
+
+    &__card {
         display: flex;
         flex-direction: row;
         color: $primary-color-bandSite-black;
         border-bottom: .0625rem solid $secondary-color-mercury;
     }
-    &__avatar{
+
+    &__avatar {
         border-radius: 50%;
-        height: 36px;
-        width: 36px;
+        max-height: 2.25rem;
+        height: 2.25rem;
+        max-width: 2.25rem;
+        width: 2.25rem;
         margin: 1rem 1rem 0 1rem;
         background-color: $secondary-color-mercury;
-     
-        @include tablet{
-            height: 48px;
-            width: 48px;
-   
+        flex-shrink: 0;
+
+        @include tablet {
+            max-height: 3rem;
+            max-width: 3rem;
+            height: 3rem;
+            width: 3rem;
+
         }
+
         @include desktop {
-            height: 48px;
-            width: 48px;
+            height: 3rem;
+            width: 3rem;
+            max-height: 3rem;
+            max-width: 3rem;
         }
-        
+
     }
-    &__header-div{
-        display:flex;
+
+    &__header-div {
+        display: flex;
         flex-direction: row;
         align-items: baseline;
         justify-content: space-between;
 
     }
-    &__name{
+
+    &__name {
         @include font-body-copy-demi;
-        
-        @include tablet{
+
+        @include tablet {
             @include font-body-copy-demi-dt;
         }
-        @include desktop{
+
+        @include desktop {
             @include font-body-copy-demi-dt;
         }
 
     }
-    &__timestamp{
+
+    &__timestamp {
         @include font-body-copy;
         color: $primary-color-silver;
-        @include tablet{
+
+        @include tablet {
             @include font-body-copy-dt;
         }
-        @include desktop{
+
+        @include desktop {
             @include font-body-copy-dt;
         }
 
     }
-    &__body-div{
-        display:flex;
+
+    &__body-div {
+        display: flex;
         flex-direction: column;
+
     }
-    
-    &__note{
+
+    &__note {
         @include font-body-copy;
-        @include tablet{
+
+        @include tablet {
             @include font-body-copy-dt;
         }
-        @include desktop{
+
+        @include desktop {
             @include font-body-copy-dt;
         }
 
@@ -534,3 +613,8 @@ body {
 
 }
 
+.comments__container input.comments__input-name:focus,
+.comments__container input.comments__input-comment:focus {
+    border: solid .0625rem $primary-color-bandSite-black;
+    background-color: $primary-color-white;
+}

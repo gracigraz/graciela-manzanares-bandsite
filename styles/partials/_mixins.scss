@@ -14,14 +14,12 @@
 
 @mixin form-fields{
     color: $primary-color-bandSite-black;
-    border: solid 1px $secondary-color-mercury;
-    border-radius: 4px;
+    border: solid .0625rem $secondary-color-mercury;
+    border-radius: .25rem;
     padding: .75rem;
     margin: .25rem;
     background-color: $secondary-color-alabaster;
 }
-
-
 
 
 

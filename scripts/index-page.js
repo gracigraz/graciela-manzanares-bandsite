@@ -99,25 +99,5 @@ displayComment(commentsF);
 
 
 
-// //Selecting '.comments__button' with querySelector and save as button
-// const button = document.querySelector('.comments__button');
-
-// // Add event listener, click, to button variable 
-// button.addEventListener("click", (event) => {
-//     console.log(event);
-//     console.log(`Button clicked at ${event.clientX}, ${event.clientY}`);
-// });
-
-// //Create const variables called inputElName and inputElNote to retrieve the input field and store it as the value
-// const inputElName = document.querySelector('.comments__input-name');
-// const inputElNote = document.querySelector('.comments__input-comment');
-
-// //  Add an event listener of 'input' in the callback log the targets value.
-// inputElName.addEventListener("input", (event) => {
-//     console.log(event.target.value);
-// });
-// inputElNote.addEventListener("input", (event) => {
-//     console.log(event.target.value);
-// });
 
 

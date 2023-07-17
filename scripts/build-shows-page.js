@@ -31,17 +31,9 @@ const shows = [
         location: 'San Francisco, CA'
     }
 ];
-const shows2 = [
-    {
-        date: 'Mon Sept 06 2021',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    }]
-
-
 
 function createShowCard(show) {
-    //create article with class of shows
+    //create article with class of shows__card
     const showCardEl = document.createElement('article');
     showCardEl.classList.add('shows__card');
 
@@ -62,11 +54,11 @@ function createShowCard(show) {
     const date = document.createElement('p');
     date.classList.add('shows__date');
     date.innerText = show.date;
-  
+
     const venue = document.createElement('p');
     venue.classList.add('shows__venue');
     venue.innerText = show.venue;
-  
+
     const location = document.createElement('p');
     location.classList.add('shows__location');
     location.innerText = show.location;
@@ -75,14 +67,14 @@ function createShowCard(show) {
     button.classList.add('shows__button');
     button.innerText = "BUY TICKETS";
 
-    //create div and add a class of comments__header-div to use flexbox on the name and date
+    //create div and add a class to use flexbox on the name and date
     const divDate = document.createElement('div');
     divDate.classList.add('shows__date-div');
-      //create div and add a class of comments__header-div to use flexbox on the name and date
+    //create div and add a class to use flexbox on the name and date
     const divVenue = document.createElement('div');
     divVenue.classList.add('shows__venue-div');
 
-    //create div and add a class of comments__header-div to use flexbox on the name and date
+    //create div and add a class to use flexbox on the name and date
     const divLocation = document.createElement('div');
     divLocation.classList.add('shows__location-div');
 
@@ -91,7 +83,7 @@ function createShowCard(show) {
     divDate.appendChild(date);
     divVenue.appendChild(venueHeader);
     divVenue.appendChild(venue);
-    divLocation.appendChild(locationHeader);    
+    divLocation.appendChild(locationHeader);
     divLocation.appendChild(location);
     showCardEl.appendChild(divDate);
     showCardEl.appendChild(divVenue);
@@ -100,16 +92,16 @@ function createShowCard(show) {
 
     console.log(showCardEl);
     return showCardEl;
-} 
- //get main
- const main = document.querySelector('main');
+}
+//get main
+const main = document.querySelector('main');
 
- //create article with class of shows
+//create article with class of shows
 const section = document.createElement('section');
 section.classList.add('shows');
 main.appendChild(section);
 
-// create heading with class of shows__heading and add the inner text of 
+// create heading with class of shows__heading and add the inner text of Shows
 const heading = document.createElement('h2');
 heading.classList.add('shows__heading');
 heading.innerText = 'Shows';
@@ -119,29 +111,6 @@ console.log(heading);
 
 const containerVisHead = document.createElement('div');
 containerVisHead.classList.add('shows__container-visible-headers');
-
-
-// // create h3 elements for the date, venue and location table headers
-// const dateHeaderV = document.createElement('h3');
-// dateHeaderV.classList.add('shows__header-date--invisible');
-// dateHeaderV.classList.add('shows__header-date');
-// dateHeaderV.innerText = "DATE";
-
-// const venueHeaderV = document.createElement('h3');
-// venueHeaderV.classList.add('shows__header-venue--invisible');
-// venueHeaderV.classList.add('shows__header-venue');
-// venueHeaderV.innerText = "VENUE";
-
-// const locationHeaderV = document.createElement('h3');
-// locationHeaderV.classList.add('shows__header-location--invisible');
-// locationHeaderV.classList.add('shows__header-location');
-// locationHeaderV.innerText = "LOCATION";
-
-// section.appendChild(containerVisHead);
-// containerVisHead.appendChild(dateHeaderV);
-// containerVisHead.appendChild(venueHeaderV);
-// containerVisHead.appendChild(locationHeaderV);
-
 
 
 const div = document.createElement('div');
@@ -154,17 +123,15 @@ console.log(div);
 
 function renderShows(show) {
     const showsEl = document.querySelector('.shows__div');
-    console.log(showsEl, "gra");
-    showsEl.innerHTML = ""; 
-       // Use forEach to loop through each item in our commentsF array and create a card
+    showsEl.innerHTML = "";
+    // Use forEach to loop through each item in the array and create a card
     shows.forEach(show => {
         console.log(show);
         const card = createShowCard(show);
         showsEl.appendChild(card);
-    });             
-}   
+    });
+}
 
 renderShows(shows);
 
-    
 

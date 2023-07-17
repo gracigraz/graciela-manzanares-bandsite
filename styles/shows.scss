@@ -245,10 +245,11 @@ body {
         &:hover {
             background-color: $secondary-color-bandSite-darkBlack;
         }
+        
     }
 
     &__card {
-        background-color: white;
+        background-color: $primary-color-white;
         padding-left: 1rem;
         border-bottom: .0625rem solid $secondary-color-mercury;
 
@@ -263,8 +264,12 @@ body {
             justify-content: space-between;
             align-items: flex-end;
         }
-
         &:hover {
+            @include desktop {
+                background-color: $secondary-color-alabaster;
+            }
+        }
+        &:active{
             @include desktop {
                 background-color: $secondary-color-mercury;
             }

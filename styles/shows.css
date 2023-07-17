@@ -328,7 +328,7 @@ body {
   background-color: #000000;
 }
 .shows__card {
-  background-color: white;
+  background-color: #FFFFFF;
   padding-left: 1rem;
   border-bottom: 0.0625rem solid #E1E1E1;
 }
@@ -348,6 +348,11 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .shows__card:hover {
+    background-color: #FAFAFA;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__card:active {
     background-color: #E1E1E1;
   }
 }
