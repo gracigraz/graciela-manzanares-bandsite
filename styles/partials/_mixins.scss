@@ -54,16 +54,25 @@
     line-height: 1.375rem;
     font-weight: 600;
 }
-
+@mixin font-subheader-regular{
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+}
 @mixin font-quote{
     font-size: .8438rem;
     line-height: 1.375rem;
     font-weight: 700;
 }
-@mixin font-body-shows-demi{
+@mixin font-body-date-demi{
     font-size: .8438rem;
     line-height: 1.375rem;
     font-weight: 600;
+}
+@mixin font-body-shows-demi{
+    font-size: .8438rem;
+    line-height: 1.375rem;
+    font-weight: 400;
 }
 
 @mixin font-body-copy{
@@ -88,10 +97,15 @@
     line-height: 1.25rem;
     font-weight: 700;
 }
-@mixin font-h3-shows-demi{
-    font-size: .6563rem;
+@mixin font-button-shows-label{
+    font-size: .875rem;
     line-height: 1.25rem;
     font-weight: 700;
+}
+@mixin font-h3-shows-demi{
+    font-size: .7188rem;
+    line-height: 1.25rem;
+    font-weight: 600;
 }
 
 //desktop and tablet text styles
@@ -110,6 +124,11 @@
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
+}
+@mixin font-subheader-regular-dt{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
 }
 @mixin font-body-copy-dt{
     font-size: .875rem;
@@ -144,6 +163,10 @@
     font-weight: 700;
 }
 
-
+@mixin font-button-label-shows-dt{
+    font-size: .9375rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+}
 
 
