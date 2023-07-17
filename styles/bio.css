@@ -715,6 +715,7 @@ body {
 .comments__body-div {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .comments__note {
   font-size: 0.8125rem;

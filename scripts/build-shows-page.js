@@ -33,7 +33,7 @@ const shows = [
 ];
 
 function createShowCard(show) {
-    //create article with class of shows__card
+    //create article with class of shows__c
     const showCardEl = document.createElement('article');
     showCardEl.classList.add('shows__card');
 
