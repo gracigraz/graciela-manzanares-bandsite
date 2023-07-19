@@ -1,5 +1,20 @@
-// api key variable declaration
-const apiKey = "057de87b-8b8b-494f-8355-988b006f173d";
+// variable declaration+assignment of the unique API key I got when registering with the API
+const apiKey = "7d6ee33e-965d-4e05-80db-0e89df09d7f2";
+//variable declaration+assignment of the API's base URL 
+const baseURL = "https://project-1-api.herokuapp.com";
+
+//get returns a promise
+//use then method to set the callback which receives the result
+//use catch to handle the errors, it registers an error callback, it will be called if there is an exception in the .then() success callback
+axios.get(baseURL+"/comments?api_key="+apiKey) 
+    .then((result)=>{
+        console.log(result); //this is the results object we get from the promise returned 
+        const commentsApi = result.data; //storing inside a variable the array of obejcts that we get from accessing <data> within <result> 
+        console.log(commentsApi); //array of objects
+    })
+    .catch((error)=>{ 
+        console.log("error message from promise", error);
+    })
 
 const shows = [
     {
