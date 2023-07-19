@@ -1,3 +1,5 @@
+// api key variable declaration
+const apiKey = "057de87b-8b8b-494f-8355-988b006f173d";
 
 const shows = [
     {

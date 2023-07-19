@@ -1,9 +1,13 @@
+// api key variable declaration
+const apiKey = "057de87b-8b8b-494f-8355-988b006f173d";
+
 //array with 3 default comment objects to start. comments have a name, timestamp and comment text.
 const commentsF = [
     {name: 'Connor Walton', timestamp: '02/17/2021', note:'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.' },
     {name: 'Emilie Beach', timestamp: '01/09/2021', note: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'},
     {name: 'Miles Acosta', timestamp: '12/20/2020', note: `I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.`}
 ];
+
 
 function createCommentCard(comment){
     // Create article with class of comments
@@ -56,7 +60,7 @@ section.appendChild(cardCon);
 function displayComment(comments) {
     // Grab comments section (class = "comments") from html to append comment cards below
     const commentsEl = document.querySelector('.comments__div');
-    commentsEl.innerHTML = ""; 
+    commentsEl.innerHTML = ""; //clear previous comments
     // Use forEach to loop through each item in our commentsF array and create a card
     comments.forEach(comment => {
         const card = createCommentCard(comment);
@@ -76,15 +80,16 @@ const handleSubmit = (event) => {
     console.log(fullName);
     console.log(message);
 
-      // Clean up data to push into and match our appointments array
+    // Clean up data to push into and match the array
     const cardData = {
         name: event.target.fullName.value,
         timestamp: new Date().toLocaleDateString(),
         note: event.target.message.value
     };
-    console.log(cardData)
+
+    console.log(cardData)//use this to check that the object is being created
     console.log(commentsF);
-    commentsF.unshift(cardData);
+    commentsF.unshift(cardData);//unshift it to (CommentsF?) arrray
     console.log(commentsF);
     displayComment(commentsF);
     event.target.reset(); //Reset the form
@@ -100,4 +105,15 @@ displayComment(commentsF);
 
 
 
+// https://project-1-api.herokuapp.com/comments/?api_key=057de87b-8b8b-494f-8355-988b006f173d
 
+// grab container with quesry selector
+// axios
+//     .get('')
+//     .then(response=>{
+//         console.log(response.data);//.data to access the data do consolelog, resposne is an object
+//         varible name.innerText = response.data.value
+//     })
+//     .catch(error=>{
+//         console.log(error)
+//     });
