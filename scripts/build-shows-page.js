@@ -4,40 +4,6 @@ const apiKey = "7d6ee33e-965d-4e05-80db-0e89df09d7f2";
 const baseURL = "https://project-1-api.herokuapp.com";
 
 
-// No longer need the harcoded array
-// const shows = [
-//     {
-//         date: 'Mon Sept 06 2021',
-//         venue: 'Ronald Lane',
-//         location: 'San Francisco, CA'
-//     },
-//     {
-//         date: 'Tue Sept 21 2021',
-//         venue: 'Pier 3 East',
-//         location: 'San Francisco, CA'
-//     },
-//     {
-//         date: 'Fri Oct 15 2021',
-//         venue: 'View Lounge',
-//         location: 'San Francisco, CA'
-//     },
-//     {
-//         date: 'Sat Nov 06 2021',
-//         description: 'Hyatt Agency',
-//         location: 'San Francisco, CA'
-//     },
-//     {
-//         date: 'Fri Nov 26 2021',
-//         description: 'Moscow Center',
-//         location: 'San Francisco, CA'
-//     },
-//     {
-//         date: 'Wed Dec 15 2021',
-//         venue: 'Press Club',
-//         location: 'San Francisco, CA'
-//     }
-// ];
-
 function createShowCard(show) {
     //create article with class of shows__card
     const showCardEl = document.createElement('article');
@@ -116,7 +82,6 @@ const heading = document.createElement('h2');
 heading.classList.add('shows__heading');
 heading.innerText = 'Shows';
 section.appendChild(heading);
-console.log(heading);
 
 // create div with class of shows__container-visible-headers
 const containerVisHead = document.createElement('div');
@@ -126,9 +91,6 @@ containerVisHead.classList.add('shows__container-visible-headers');
 const div = document.createElement('div');
 div.classList.add('shows__div');
 section.appendChild(div);
-console.log(div);
-
-
 
 //function that takes a parameter 
 function renderShows(shows) {
@@ -137,25 +99,17 @@ function renderShows(shows) {
     showsEl.innerHTML = ""; 
     // Use forEach to loop through each item in the array and create a card
     shows.forEach(show => {
-        console.log(show);
         //create a new card element from the lis
         const card = createShowCard(show);
         showsEl.appendChild(card);
     });
 }
 
-// renderShows(shows);
-
 //function to get and display the data (shows)
-//get returns a promise
-//use then method to set the callback which receives the result
-//use catch to handle the errors, it registers an error callback, it will be called if there is an exception in the .then() success callback
 const getAndDisplayListItems = function(){
     axios.get(baseURL+"/showdates?api_key="+apiKey) 
         .then((result)=>{
-            console.log(result); //this is the results object we get from the promise returned 
             const shows = result.data; //storing inside a variable the array of objects that we get from accessing <data> within <result> 
-            console.log(shows); //array of objects
             renderShows(shows);
         })
         .catch((error)=>{ 
@@ -164,3 +118,4 @@ const getAndDisplayListItems = function(){
 }
 //display all shows when we first load the page
 getAndDisplayListItems();
+
