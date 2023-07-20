@@ -74,6 +74,7 @@ body {
 
 .musicians {
   background-color: #FFFFFF;
+  color: #323232;
   padding: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -286,6 +287,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
   .gallery {
@@ -470,7 +472,7 @@ body {
   width: 2.25rem;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 2rem 1rem 0 1rem;
+  margin: 1.5rem 1rem 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .comments__profile-image {
@@ -478,6 +480,7 @@ body {
     height: 3rem;
     max-width: 3rem;
     width: 3rem;
+    margin-top: 1.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -486,6 +489,7 @@ body {
     height: 3rem;
     max-width: 3rem;
     width: 3rem;
+    margin-top: 1.75rem;
   }
 }
 .comments__button {

@@ -138,6 +138,8 @@ const handleSubmit = (event) => {
 const formEl = document.querySelector('#comments__form');
 // Add an event listener to the form to get all input data within form
 formEl.addEventListener("submit", handleSubmit);
+
+
 // displayComment(commentsF);
 
 //display all shows when we first load the page

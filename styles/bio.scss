@@ -53,6 +53,7 @@ body {
 
 .musicians {
     background-color: $primary-color-white;
+    color: $primary-color-bandSite-black;
     padding: 1.5rem 1rem 1rem 1rem;
 
     @include tablet {
@@ -211,6 +212,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: $primary-color-bandSite-black;
 
     @include tablet {
         padding: 3rem 2.25rem 2.25rem 2.25rem;
@@ -380,13 +382,15 @@ body {
         max-width: 2.25rem;
         width: 2.25rem;
         object-fit: cover;
-        margin: 2rem 1rem 0 1rem;
+        margin: 1.5rem 1rem 0 1rem;
+   
 
         @include tablet {
             max-height: 3rem;
             height: 3rem;
             max-width: 3rem;
             width: 3rem;
+            margin-top: 1.75rem;
         }
 
         @include desktop {
@@ -394,6 +398,7 @@ body {
             height: 3rem;
             max-width: 3rem;
             width: 3rem;
+            margin-top: 1.75rem;
         }
 
     }
