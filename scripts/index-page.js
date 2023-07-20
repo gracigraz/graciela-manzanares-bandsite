@@ -4,11 +4,6 @@ const apiKey = "7d6ee33e-965d-4e05-80db-0e89df09d7f2";
 //variable declaration+assignment of the API's base URL 
 const baseURL = "https://project-1-api.herokuapp.com";
 
-// console.log(baseURL+"/comments/?api_key="+apiKey);
-// console.log(baseURL);
-// // console.log(axios.get('https://project-1-api.herokuapp.com/'));
-// console.log("https://project-1-api.herokuapp.com/comments?api_key=7d6ee33e-965d-4e05-80db-0e89df09d7f2");
-
 
 //get returns a promise
 //use then method to set the callback which receives the result
@@ -16,14 +11,14 @@ const baseURL = "https://project-1-api.herokuapp.com";
 axios.get(baseURL+"/comments?api_key="+apiKey) 
     .then((result)=>{
         console.log(result); //this is the results object we get from the promise returned 
-        const commentsApi = result.data; //storing inside a variable the array of obejcts that we get from accessing <data> within <result> 
+        const commentsApi = result.data; //storing inside a variable the array of objects that we get from accessing <data> within <result> 
         console.log(commentsApi); //array of objects
     })
     .catch((error)=>{ 
         console.log("error message from promise", error);
     })
 
-
+//post returns a promise
 axios.post(baseURL+"/comments?api_key="+apiKey) 
     .then((result)=>{
         console.log(result); //this is the results object we get from the promise returned 
@@ -33,8 +28,6 @@ axios.post(baseURL+"/comments?api_key="+apiKey)
     .catch((error)=>{ 
         console.log("error message from promise", error);
     })
-
-
 
 
 
@@ -106,7 +99,6 @@ function displayComment(comments) {
 }
 
 
-
 //Create a handleSubmit function that takes in the event object
 const handleSubmit = (event) => {
     event.preventDefault(); // Prevents the form using its default behavior
@@ -139,18 +131,3 @@ formEl.addEventListener("submit", handleSubmit);
 
 displayComment(commentsF);
 
-
-
-
-// https://project-1-api.herokuapp.com/comments/?api_key=057de87b-8b8b-494f-8355-988b006f173d
-
-// grab container with quesry selector
-// axios
-//     .get('')
-//     .then(response=>{
-//         console.log(response.data);//.data to access the data do consolelog, resposne is an object
-//         varible name.innerText = response.data.value
-//     })
-//     .catch(error=>{
-//         console.log(error)
-//     });
