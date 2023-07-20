@@ -4,18 +4,6 @@ const apiKey = "7d6ee33e-965d-4e05-80db-0e89df09d7f2";
 const baseURL = "https://project-1-api.herokuapp.com";
 
 
-///function to get and display the data (comments)
-const getAndDisplayListItems = function () {
-    axios.get(baseURL + "/comments?api_key=" + apiKey)
-        .then((result) => {
-            console.log(result); //this is the results object we get from the promise returned 
-            const commentsApi = result.data; //storing inside a variable the array of objects that we get from accessing <data> within <result> 
-            console.log(commentsApi); //array of objects
-        })
-        .catch((error) => {
-            console.log("error message from promise", error);
-        });
-}
 
 
 // //array with 3 default comment objects to start. comments have a name, timestamp and comment text.
@@ -43,11 +31,18 @@ function createCommentCard(comment) {
 
     const timestamp = document.createElement('span');
     timestamp.classList.add('comments__timestamp');
-    timestamp.innerText = comment.timestamp;
+    const epochDate = new Date(comment.timestamp)
+ 
+     // timestamp.innerText = comment.timestamp;
+    // console.log(comment.timestamp);
+    const convertedDate = epochDate.toLocaleDateString('en-US', {month: '2-digit', year: 'numeric', day: '2-digit'});
+    console.log(convertedDate);
+    timestamp.innerText = convertedDate;
 
     const note = document.createElement('p');
     note.classList.add('comments__note');
-    note.innerText = comment.note;
+    note.innerText = comment.comment;
+    console.log(comment.comment);
 
     //create div and add a class of comments__header-div to use flexbox on the name and date
     const divHeader = document.createElement('div');
@@ -75,16 +70,30 @@ section.appendChild(cardCon);
 
 //function that takes in one comment object as a parameter and displays it on the page
 function displayComment(comments) {
-    // Grab comments section (class = "comments") from html to append comment cards below
+    // Grab comments section (class = "comments__div") from html to append comment cards below
     const commentsEl = document.querySelector('.comments__div');
     commentsEl.innerHTML = ""; //clear previous comments
     // Use forEach to loop through each item in our commentsF array and create a card
     comments.forEach(comment => {
         const card = createCommentCard(comment);
-        
+        console.log(comments);
+        console.log(comment);
          //append the new comments el  
         commentsEl.appendChild(card);
     });
+}
+///function to get and display the data (comments)
+const getAndDisplayListItems = function () {
+    axios.get(baseURL + "/comments?api_key=" + apiKey)
+        .then((result) => {
+            console.log(result); //this is the results object we get from the promise returned 
+            const commentsApi = result.data; //storing inside a variable the array of objects that we get from accessing <data> within <result> 
+            console.log(commentsApi); //array of objects
+            displayComment(commentsApi);
+        })
+        .catch((error) => {
+            console.log("error message from promise", error);
+        });
 }
 
 
@@ -129,10 +138,7 @@ const handleSubmit = (event) => {
 const formEl = document.querySelector('#comments__form');
 // Add an event listener to the form to get all input data within form
 formEl.addEventListener("submit", handleSubmit);
-
 // displayComment(commentsF);
-
-
 
 //display all shows when we first load the page
 getAndDisplayListItems();

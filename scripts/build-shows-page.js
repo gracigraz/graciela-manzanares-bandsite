@@ -25,8 +25,8 @@ function createShowCard(show) {
     // create paragraph elements for the date, venue and location
     const date = document.createElement('p');
     date.classList.add('shows__date');
-    const options = { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' };
-    const convertedDate = new Date(show.date).toLocaleDateString('en-US', options).replace(/,/g, '');
+    const formatOption = { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' };
+    const convertedDate = new Date(show.date).toLocaleDateString('en-US', formatOption).replace(/,/g, '');
     date.innerText = convertedDate;
 
     const venue = document.createElement('p');
