@@ -64,7 +64,17 @@ function createShowCard(show) {
     showCardEl.appendChild(divLocation);
     showCardEl.appendChild(button);
 
-    console.log(showCardEl);
+
+    showCardEl.addEventListener('click', () => {
+        // remove 'shows__card--selected' class from any show card previously selected, cardSelected has null value until you click once
+        const cardSelected = document.querySelector('.shows__card--selected');
+        if (cardSelected) {
+            cardSelected.classList.remove('shows__card--selected');
+        }
+        // add 'shows__card--selected' class to the current show card
+        showCardEl.classList.add('shows__card--selected');
+    });
+
     return showCardEl;
 }
 

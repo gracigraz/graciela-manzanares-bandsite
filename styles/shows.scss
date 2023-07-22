@@ -268,13 +268,10 @@ body {
                 background-color: $secondary-color-alabaster;
             }
         }
-        &:active{
-            @include desktop {
-                background-color: $secondary-color-mercury;
-            }
-        }
         &--selected{
+            @include desktop {
             background-color: $secondary-color-mercury;
+            }
         }
     }
     &__div{

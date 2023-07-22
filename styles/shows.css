@@ -352,12 +352,9 @@ body {
   }
 }
 @media screen and (min-width: 1280px) {
-  .shows__card:active {
+  .shows__card--selected {
     background-color: #E1E1E1;
   }
-}
-.shows__card--selected {
-  background-color: #E1E1E1;
 }
 @media screen and (min-width: 768px) {
   .shows__div {
