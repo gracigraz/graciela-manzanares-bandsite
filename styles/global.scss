@@ -11,10 +11,6 @@ body {
 .link {
     text-decoration: none;  
     color: $secondary-color-mercury;
-    &--active {
-        text-decoration: none;  
-        color: $primary-color-white;
-    }
 }
 
 

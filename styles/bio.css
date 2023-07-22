@@ -23,10 +23,6 @@ body {
   font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 
-.link {
-  text-decoration: none;
-}
-
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
   background-position: center;
@@ -558,7 +554,7 @@ body {
   min-height: 1.5rem;
   border-radius: 0.25rem;
   padding: 0.25rem 0.75rem;
-  margin: 0.25rem;
+  margin: 0.25rem 0;
   background-color: #FAFAFA;
 }
 @media screen and (min-width: 768px) {
@@ -605,7 +601,7 @@ body {
   border: solid 0.0625rem #E1E1E1;
   border-radius: 0.25rem;
   padding: 0.75rem;
-  margin: 0.25rem;
+  margin: 0.25rem 0;
   background-color: #FAFAFA;
   height: 4.5rem;
 }

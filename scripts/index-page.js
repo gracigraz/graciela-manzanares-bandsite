@@ -73,12 +73,15 @@ function displayComment(comments) {
     // Grab comments section (class = "comments__div") from html to append comment cards below
     const commentsEl = document.querySelector('.comments__div');
     commentsEl.innerHTML = ""; //clear previous comments
-    // Use forEach to loop through each item in our commentsF array and create a card
-    comments.forEach(comment => {
+    // create a copy of the original comments array and then reverse the copy. 
+    //The original comments array remains unchanged but the comments can be displayed in reverse order 
+    const reversedComments = comments.slice().reverse();
+    // Use forEach to loop through each item in reversedComments array 
+    //and append the comment cards from last to first. 
+    reversedComments.forEach(comment => {
         const card = createCommentCard(comment);
         console.log(comments);
         console.log(comment);
-         //append the new comments el  
         commentsEl.appendChild(card);
     });
 }
@@ -106,29 +109,37 @@ const handleSubmit = (event) => {
     //pull out data from our form to build our object
     const fullName = event.target.fullName.value; //Create a variable called fullName and store the value of the event target fullName
     const message = event.target.message.value; //Create a variable called message and store the value of the event target fullName
-
+    console.log(fullName);
+    console.log(message);
     // Clean up data to push into and match the array
     console.log(event);
     const cardData = {
-        name: event.target.fullName.value,
-        timestamp: new Date().toLocaleDateString(),
-        note: event.target.message.value
+        name: fullName,
+        // timestamp: new Date().toLocaleDateString(),
+        comment: message //this was called note
     };
 
     console.log(cardData);
 
+    console.log(baseURL + "/comments?api_key=" + apiKey);
+    console.log("https://project-1-api.herokuapp.com/comments?api_key=7d6ee33e-965d-4e05-80db-0e89df09d7f2");
+
     //post returns a promise, post the data and wait for the response
-    axios.post(baseURL + "/comments?api_key=" + apiKey, cardData)
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=7d6ee33e-965d-4e05-80db-0e89df09d7f2", cardData)
     .then((response) => {
         console.log(response);
+        // commentsApi.unshift(cardData);//unshift it to array  
+        // displayComment(commentsApi);
        //call getAndDisplayListItems to get all the todos including the new one
         // and then clear the todos and re-display them
+        
         getAndDisplayListItems();
+        // event.target.reset(); 
     })
     .catch((error) => {
         console.log("error message from calling API", error);
     });
-
+         
     // commentsF.unshift(cardData);//unshift it to array
     // displayComment(commentsF);
     event.target.reset(); //Reset the form

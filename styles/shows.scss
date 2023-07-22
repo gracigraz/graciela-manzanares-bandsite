@@ -22,7 +22,6 @@ body {
     align-items: flex-start;
     height: 79vw;
     padding: 1rem;
-   
     @include tablet {
         padding: 0 2.25rem 3rem 2.25rem;
         height: 56vw;
@@ -273,6 +272,9 @@ body {
             @include desktop {
                 background-color: $secondary-color-mercury;
             }
+        }
+        &--selected{
+            background-color: $secondary-color-mercury;
         }
     }
     &__div{

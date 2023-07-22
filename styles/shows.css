@@ -356,6 +356,9 @@ body {
     background-color: #E1E1E1;
   }
 }
+.shows__card--selected {
+  background-color: #E1E1E1;
+}
 @media screen and (min-width: 768px) {
   .shows__div {
     display: flex;

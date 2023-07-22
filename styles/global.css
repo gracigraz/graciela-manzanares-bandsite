@@ -27,10 +27,6 @@ body {
   text-decoration: none;
   color: #E1E1E1;
 }
-.link--active {
-  text-decoration: none;
-  color: #FFFFFF;
-}
 
 .main-nav {
   background-color: #323232;

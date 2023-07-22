@@ -10,10 +10,6 @@ body {
     font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 
-.link {
-    text-decoration: none;
-}
-
 .hero {
     background-image: url(../assets/images/hero-bio.jpg);
     background-position: center;
@@ -465,7 +461,7 @@ body {
         min-height: 1.5rem;
         border-radius: .25rem;
         padding: 0.25rem .75rem;
-        margin: .25rem;
+        margin: .25rem 0;
         background-color: $secondary-color-alabaster;
 
         @include tablet {
@@ -488,9 +484,7 @@ body {
             padding-top: 0;
             padding-bottom: 0;
             padding-left: 0;
-
         }
-
     }
 
     &__label-comment {
@@ -524,7 +518,6 @@ body {
             padding-bottom: 0;
             padding-left: 0;
         }
-
     }
 
 
