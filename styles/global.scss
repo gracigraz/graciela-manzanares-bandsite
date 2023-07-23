@@ -37,8 +37,8 @@ body {
 
     &__logo {
         display: flex;
-        max-height: 1.25rem;
-        max-width: 7.5rem;
+        max-width: 100%;
+        width: 100%;
         padding: 1rem 0 .5rem 0;
 
         @include tablet {
@@ -155,12 +155,12 @@ body {
 
         @include tablet {
             @include font-section-header-dt;
-            margin-right: 1.75rem;
+            margin-right: 1.25rem;
         }
 
         @include desktop {
             @include font-section-header-dt;
-            margin-right: 1.75rem;
+            margin-right: 2rem;
         }
     }
 
@@ -170,14 +170,14 @@ body {
     }
 
     &__icon {
-        width: 1.5625rem;
-        height: 1.5625rem;
+        width: 50%;
+        height: 60%;
         padding-right: 1.5rem;
     }
 
     &__logo-top {
-        max-height: 1.25rem;
-        max-width: 7.5rem;
+        max-width: 100%;
+        width: 100%;
         padding: 1rem 0;
         display: none;
 
@@ -192,8 +192,8 @@ body {
     }
 
     &__logo-bottom {
-        max-height: 1.25rem;
-        max-width: 7.5rem;
+        max-width: 17vh;
+        width: 17vh;
         padding: 1rem 0;
 
         @include tablet {
@@ -230,7 +230,7 @@ body {
         }
 
         @include desktop {
-            padding: 0rem 2.25rem 0 0;
+            padding: 0rem 3rem 0 0;
         }
     }
 

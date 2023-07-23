@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 58vw;
+  height: 59vw;
   padding: 0 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -462,29 +462,29 @@ body {
 }
 .comments__profile-image {
   border-radius: 50%;
-  max-height: 2.25rem;
-  height: 2.25rem;
-  max-width: 2.25rem;
-  width: 2.25rem;
+  max-height: 5vh;
+  height: 5vh;
+  max-width: 5vh;
+  width: 5vh;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 1.5rem 1rem 0 1rem;
+  margin: 1.5rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .comments__profile-image {
-    max-height: 3rem;
-    height: 3rem;
-    max-width: 3rem;
-    width: 3rem;
+    max-height: 5.75vw;
+    height: 5.75vw;
+    max-width: 5.75vw;
+    width: 5.75vw;
     margin-top: 1.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comments__profile-image {
-    max-height: 3rem;
-    height: 3rem;
-    max-width: 3rem;
-    width: 3rem;
+    max-height: 3.75vw;
+    height: 3.75vw;
+    max-width: 3.75vw;
+    width: 3.75vw;
     margin-top: 1.75rem;
   }
 }
@@ -493,10 +493,9 @@ body {
   border: none;
   border-radius: 0.25rem;
   font-size: inherit;
-  padding: 0.5rem;
+  padding: 0.625rem;
   background-color: #323232;
   color: #FFFFFF;
-  height: 2.5rem;
   width: 100%;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -505,19 +504,20 @@ body {
 }
 @media screen and (min-width: 768px) {
   .comments__button {
-    min-width: 9.375rem;
-    width: 33%;
+    min-width: 30%;
+    width: 30%;
     align-self: flex-end;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     font-weight: 700;
     font-weight: 400;
+    margin-top: 0.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comments__button {
-    min-width: 9.375rem;
-    width: 30%;
+    min-width: 33%;
+    width: 33%;
     align-self: flex-end;
     font-size: 0.9375rem;
     line-height: 1.25rem;
@@ -550,8 +550,8 @@ body {
 .comments__input-name {
   color: #323232;
   border: solid 0.0625rem #E1E1E1;
-  height: 1.5rem;
-  min-height: 1.5rem;
+  height: 7vw;
+  min-height: 7vw;
   border-radius: 0.25rem;
   padding: 0.25rem 0.75rem;
   margin: 0.25rem 0;
@@ -559,15 +559,15 @@ body {
 }
 @media screen and (min-width: 768px) {
   .comments__input-name {
-    height: 1.5rem;
-    min-height: 1.5rem;
+    height: 1.75vw;
+    min-height: 1.75vw;
     padding: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comments__input-name {
-    height: 1.5rem;
-    min-height: 1.5rem;
+    height: 1.5vw;
+    min-height: 1.5vw;
     padding: 1rem;
   }
 }
@@ -593,7 +593,7 @@ body {
   display: flex;
   flex-direction: column;
   color: #AFAFAF;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   width: 100%;
 }
 .comments__input-comment {
@@ -603,17 +603,17 @@ body {
   padding: 0.75rem;
   margin: 0.25rem 0;
   background-color: #FAFAFA;
-  height: 4.5rem;
+  height: 22vw;
 }
 @media screen and (min-width: 768px) {
   .comments__input-comment {
-    height: 4.5rem;
+    height: 8.5vw;
     padding: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comments__input-comment {
-    height: 4.5rem;
+    height: 5vw;
     padding: 1rem;
   }
 }
@@ -643,28 +643,28 @@ body {
 }
 .comments__avatar {
   border-radius: 50%;
-  max-height: 2.25rem;
-  height: 2.25rem;
-  max-width: 2.25rem;
-  width: 2.25rem;
-  margin: 1rem 1rem 0 1rem;
+  max-height: 11vw;
+  height: 11vw;
+  max-width: 11vw;
+  width: 11vw;
+  margin: 1rem 1rem 1rem 1rem;
   background-color: #E1E1E1;
   flex-shrink: 0;
 }
 @media screen and (min-width: 768px) {
   .comments__avatar {
-    max-height: 3rem;
-    max-width: 3rem;
-    height: 3rem;
-    width: 3rem;
+    max-height: 6vw;
+    height: 6vw;
+    max-width: 6vw;
+    width: 6vw;
   }
 }
 @media screen and (min-width: 1280px) {
   .comments__avatar {
-    height: 3rem;
-    width: 3rem;
-    max-height: 3rem;
-    max-width: 3rem;
+    max-height: 3.75vw;
+    height: 3.75vw;
+    max-width: 3.75vw;
+    width: 3.75vw;
   }
 }
 .comments__header-div {
@@ -674,6 +674,8 @@ body {
   justify-content: space-between;
 }
 .comments__name {
+  -webkit-margin-after: 0.25rem;
+          margin-block-end: 0.25rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 600;
@@ -718,6 +720,10 @@ body {
   width: 100%;
 }
 .comments__note {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 1.5rem;
+          margin-block-end: 1.5rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;

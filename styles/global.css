@@ -52,8 +52,8 @@ body {
 }
 .main-nav__logo {
   display: flex;
-  max-height: 1.25rem;
-  max-width: 7.5rem;
+  max-width: 100%;
+  width: 100%;
   padding: 1rem 0 0.5rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -199,7 +199,7 @@ body {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
-    margin-right: 1.75rem;
+    margin-right: 1.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -207,7 +207,7 @@ body {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
-    margin-right: 1.75rem;
+    margin-right: 2rem;
   }
 }
 .footer__nav {
@@ -215,13 +215,13 @@ body {
   justify-content: flex-start;
 }
 .footer__icon {
-  width: 1.5625rem;
-  height: 1.5625rem;
+  width: 50%;
+  height: 60%;
   padding-right: 1.5rem;
 }
 .footer__logo-top {
-  max-height: 1.25rem;
-  max-width: 7.5rem;
+  max-width: 100%;
+  width: 100%;
   padding: 1rem 0;
   display: none;
 }
@@ -237,8 +237,8 @@ body {
   }
 }
 .footer__logo-bottom {
-  max-height: 1.25rem;
-  max-width: 7.5rem;
+  max-width: 17vh;
+  width: 17vh;
   padding: 1rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -280,7 +280,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__contact {
-    padding: 0rem 2.25rem 0 0;
+    padding: 0rem 3rem 0 0;
   }
 }
 .footer__contact-name {

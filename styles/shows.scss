@@ -20,11 +20,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 79vw;
+    height: 72vw;
     padding: 1rem;
     @include tablet {
         padding: 0 2.25rem 3rem 2.25rem;
-        height: 56vw;
+        height: 57vw;
     }
 
     @include desktop {
@@ -36,11 +36,11 @@ body {
         @include font-subheader-regular;
         color: $primary-color-white;
         @include margin-block;
-        padding-top: 1.5rem;
+        margin-top: 2.5rem;
 
         @include tablet {
             @include font-subheader-regular-dt;
-            padding-top: 3.5rem;
+            margin-top: 4rem;
         }
 
         @include desktop {
@@ -71,22 +71,24 @@ body {
     }
 
     &__song {
-        margin: 1.15rem 0 1.5rem 0;
-        height: 100px;
+        margin: 1.15rem 0 0 0;
+        height: 38%;
         @include tablet {
-            width: 61%;
-            height: 130px;
+            width: 79%;
+            height: 34%;
         }
 
         @include desktop {
-            height: 137px;
-            width: 35%;
+            height: 70%;
+            width: 35.25%;
+            margin: 1.15rem 0 1.5rem 0;
             margin-left: 6.5rem;
         }
     }
     &__div-desktop{
+        display: flex;
+        flex-direction:column;
         @include desktop{
-            display: flex;
             flex-direction:row;
             align-items: center;
         } 
@@ -105,7 +107,7 @@ body {
         padding: 3rem 6rem 2.25rem 6rem;
         display: flex;
         flex-direction:row;
-        justify-content: flex-start;
+        justify-content: space-evenly;
     }
 
     &__heading {
@@ -118,6 +120,7 @@ body {
 
         @include tablet {
             @include font-section-header-dt;
+            padding-left: 0;
             padding-bottom: 1.25rem;
         }
 
@@ -141,7 +144,7 @@ body {
     }
     &__date-div{
         @include desktop{
-            margin-right: 9rem;
+            margin-right: 8.9rem;
         }
     }
     &__venue-div{
@@ -150,8 +153,13 @@ body {
         }
     }
     &__location-div{
+        @include tablet{
+          
+            margin-left: 0.5rem;
+        }
         @include desktop{
             margin-right: 3.5rem;
+        
         }
     }
     &__header-date, &__header-venue, &__header-location{
@@ -215,26 +223,23 @@ body {
     &__button {
         background-color: $primary-color-bandSite-black;
         color: $primary-color-white;
-        height: 40px;
         width: 95%;
         border-radius: .25rem;
         text-align: center;
         border: none;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        padding: .65rem 0;
         @include font-button-shows-label;   
 
         @include tablet {
-            min-width: 150px;
-            width: 10.25rem;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            width: 22%;
             margin-bottom: 1.25rem;
+           
             @include font-button-label-shows-dt;
         }
 
         @include desktop {
-            min-width: 150px;
-            width: 10.25rem;
+            width: 21%;
             padding-left: 2rem;
             padding-right: 2rem;
             margin-bottom: 1.25rem;
@@ -256,6 +261,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+            padding-left: 0;
         }
 
         @include desktop {
