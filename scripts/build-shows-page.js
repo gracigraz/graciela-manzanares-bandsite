@@ -41,18 +41,17 @@ function createShowCard(show) {
     button.classList.add('shows__button');
     button.innerText = "BUY TICKETS";
 
-    //create div and add a class to use flexbox on the name and date
+    //create div and add a class to use flexbox on the date, venue and location
     const divDate = document.createElement('div');
     divDate.classList.add('shows__date-div');
-    //create div and add a class to use flexbox on the name and date
+    //create div and add a class to use flexbox on the date, venue and location
     const divVenue = document.createElement('div');
     divVenue.classList.add('shows__venue-div');
-
-    //create div and add a class to use flexbox on the name and date
+    //create div and add a class to use flexbox on the date, venue and location
     const divLocation = document.createElement('div');
     divLocation.classList.add('shows__location-div');
 
-    // append elements above as children to the showCardEl
+    //append elements above as children to the showCardEl
     divDate.appendChild(dateHeader);
     divDate.appendChild(date);
     divVenue.appendChild(venueHeader);
@@ -64,14 +63,14 @@ function createShowCard(show) {
     showCardEl.appendChild(divLocation);
     showCardEl.appendChild(button);
 
-
+    //add eventlistener to make a row change color when clicked. The row stays “selected” until another row is clicked. shows__card--selected is styled in scss
     showCardEl.addEventListener('click', () => {
         // remove 'shows__card--selected' class from any show card previously selected, cardSelected has null value until you click once
         const cardSelected = document.querySelector('.shows__card--selected');
         if (cardSelected) {
             cardSelected.classList.remove('shows__card--selected');
         }
-        // add 'shows__card--selected' class to the current show card
+        // add 'shows__card--selected' class to the current show card. 
         showCardEl.classList.add('shows__card--selected');
     });
 
@@ -92,16 +91,12 @@ heading.classList.add('shows__heading');
 heading.innerText = 'Shows';
 section.appendChild(heading);
 
-// create div with class of shows__container-visible-headers
-const containerVisHead = document.createElement('div');
-containerVisHead.classList.add('shows__container-visible-headers');
-
 // create div with class of shows__div and append to the section shows
 const div = document.createElement('div');
 div.classList.add('shows__div');
 section.appendChild(div);
 
-//function that takes a parameter 
+//function that renders the concerts 
 function renderShows(shows) {
     const showsEl = document.querySelector('.shows__div');
     //clear existing contents of the showsEl div
@@ -114,7 +109,7 @@ function renderShows(shows) {
     });
 }
 
-//function to get and display the data (shows)
+//function to get the data (shows) from the API
 const getAndDisplayListItems = function(){
     axios.get(baseURL+"/showdates?api_key="+apiKey) 
         .then((result)=>{
