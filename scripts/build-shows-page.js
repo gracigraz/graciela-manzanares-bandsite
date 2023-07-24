@@ -117,7 +117,7 @@ const getAndDisplayListItems = function(){
             renderShows(shows);
         })
         .catch((error)=>{ 
-            console.log("error message from promise", error);
+            //"error message from promise", error
         });
 }
 //display all shows when we first load the page

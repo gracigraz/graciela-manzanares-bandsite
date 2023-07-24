@@ -144,7 +144,7 @@ body {
     }
     &__date-div{
         @include desktop{
-            margin-right: 8.9rem;
+            margin-right: 8.4rem;
         }
     }
     &__venue-div{
@@ -154,12 +154,10 @@ body {
     }
     &__location-div{
         @include tablet{
-          
             margin-left: 0.5rem;
         }
         @include desktop{
             margin-right: 3.5rem;
-        
         }
     }
     &__header-date, &__header-venue, &__header-location{
@@ -305,5 +303,4 @@ body {
             height:50%;
         }
     }
-
 }

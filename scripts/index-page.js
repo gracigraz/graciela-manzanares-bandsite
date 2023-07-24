@@ -75,12 +75,11 @@ function displayComment(comments) {
 const getAndDisplayListItems = function () {
     axios.get(baseURL + "/comments?api_key=" + apiKey)
         .then((result) => {
-            console.log(result); //this is the results object we get from the promise returned 
             const commentsApi = result.data; //storing inside a variable the array of objects that we get from accessing <data> within <result> 
             displayComment(commentsApi);
         })
         .catch((error) => {
-            console.log("error message from promise", error);
+            //"error message from promise", error
         });
 }
 
@@ -104,14 +103,13 @@ const handleSubmit = (event) => {
     //post returns a promise, post the data and wait for the response
     axios.post(baseURL + "/comments?api_key=" + apiKey, cardData)
     .then((response) => {
-        console.log(response);
         //call getAndDisplayListItems to get all the comments including the new one
         // and then clear the todos and re-display them
         getAndDisplayListItems();
     
     })
     .catch((error) => {
-        console.log("error message from calling API", error);
+        //"error message from calling API", error
     });
 
     event.target.reset(); //Reset the form
